@@ -311,6 +311,26 @@ function eventHandler() {
 	});
 	// modal window
 
+
+	var controller = new ScrollMagic.Controller();
+
+	// define movement of panels
+	var wipeAnimation = new TimelineMax()
+		.to(".headerBlock", 1,{ opacity: 0, transform: "rotateY(90deg)"})
+		// .to(".headerBlock", 1, {opacity: 0, transform: "rotateY(90deg)"})
+		// .fromTo("sBanner", .1, {}, {});
+
+	// create scene to pin and link animation
+	new ScrollMagic.Scene({
+		triggerElement: ".header",
+		triggerHook: "onLeave",
+		duration: "100%"
+	})
+		.setPin(".header")
+		.setTween(wipeAnimation)
+		.addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
