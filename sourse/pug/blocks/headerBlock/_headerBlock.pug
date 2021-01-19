@@ -1,37 +1,38 @@
 mixin headerBlock()
 	.wrap
-		// start headerBlock
-		+b.headerBlock.section#headerBlock&attributes(attributes)
-			block
-			+pic('santo.png').santo
-			.container
-				+e.title
-					h1 Оптовые поставки
-					.row
-						.col-lg-auto
-							+e.lg кофе
-						.col-lg-auto
-							+e.text в&nbsp;капсулах для кофемашин&nbsp;Nespresso
-				+e.body
-					+e.row.row
-						+e.col.col-auto
-							.row.g-0
-								+e.card.bg-wrap.col-12
-									+pic("card-1.jpg",'bg',0).d-none.d-lg-block.picture-bg
-									+e.card-text Лучшие моносорта и&nbsp;бленды кофе категории 
-										strong specialty
-								+e.card.bg-wrap.col-lg-6
-									+pic("card-2.jpg",'bg',0).d-none.d-lg-block.picture-bg
-									+e.card-text Цена почти 
-										strong  на&nbsp;30%&nbsp;ниже
-										|  оригинала
-								+e.card.bg-wrap.col-lg-6
-									+pic("card-3.jpg",'bg',0).d-none.d-lg-block.picture-bg
-									+e.card-text Доставка по&nbsp;всей России 
-										strong  с&nbsp;отправкой в&nbsp;течение 2х&nbsp;дней
+		- for (var x = 0; x < 20; x++)
+			// start headerBlock
+			+b.headerBlock.section#headerBlock&attributes(attributes)
+				block
+				+pic('santo.png').santo
+				.container
+					+e.title
+						h1 Оптовые поставки
+						.row
+							.col-lg-auto
+								+e.lg кофе
+							.col-lg-auto
+								+e.text в&nbsp;капсулах для кофемашин&nbsp;Nespresso
+					+e.body
+						+e.row.row
+							+e.col.col-auto
+								.row.g-0
+									+e.card.bg-wrap.col-12
+										+pic("card-1.jpg",'bg',0).d-none.d-lg-block.picture-bg
+										+e.card-text Лучшие моносорта и&nbsp;бленды кофе категории 
+											strong specialty
+									+e.card.bg-wrap.col-lg-6
+										+pic("card-2.jpg",'bg',0).d-none.d-lg-block.picture-bg
+										+e.card-text Цена почти 
+											strong  на&nbsp;30%&nbsp;ниже
+											|  оригинала
+									+e.card.bg-wrap.col-lg-6
+										+pic("card-3.jpg",'bg',0).d-none.d-lg-block.picture-bg
+										+e.card-text Доставка по&nbsp;всей России 
+											strong  с&nbsp;отправкой в&nbsp;течение 2х&nbsp;дней
 
-						+e.col-right.col
-							+e.link-wrap
-								+e.link(href="#") Сначала расскажите, что не&nbsp;так с&nbsp;кофе, почему даете такую цену
-							+e.btn(Href="#") Получить тестовую партию бесплатно
-		// end headerBlock
+							+e.col-right.col
+								+e.link-wrap
+									+e.link(href="#") Сначала расскажите, что не&nbsp;так с&nbsp;кофе, почему даете такую цену
+								+e.btn(Href="#") Получить тестовую партию бесплатно
+			// end headerBlock
