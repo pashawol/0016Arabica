@@ -257,7 +257,15 @@ function eventHandler() {
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	}
+	} // 	var original = document.querySelector('.headerBlock');
+	// 	if (original) {
+	// 	var clone = original.cloneNode(true); // "deep" clone
+	// 	for (let index = 0; index < 39; index++) {
+	// 		document.querySelector('.wrap').insertBefore(clone);
+	// 		console.log(index);
+	// 	}
+	// } 
+
 
 	function whenResize() {// const topH = document.querySelector("header ").offsetHeight;
 		// if ($(window).scrollTop() > topH) {
