@@ -309,7 +309,9 @@ function eventHandler() {
 
 	var controller = new ScrollMagic.Controller(); // define movement of panels
 
-	var wipeAnimation = new TimelineMax().to(".headerBlock", 1, {
+	var wipeAnimation = new TimelineMax().to(".headerBlock", .1, {
+		className: "+=start"
+	}).to(".headerBlock", .5, {
 		opacity: 0,
 		transform: "rotateY(90deg)"
 	}); // .to(".headerBlock", 1, {opacity: 0, transform: "rotateY(90deg)"})
@@ -319,8 +321,8 @@ function eventHandler() {
 	new ScrollMagic.Scene({
 		triggerElement: ".header",
 		triggerHook: "onLeave",
-		duration: "100%"
-	}).setPin(".header").setTween(wipeAnimation).addIndicators() // add indicators (requires plugin)
+		duration: "60%"
+	}).setPin(".header").setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 }
 

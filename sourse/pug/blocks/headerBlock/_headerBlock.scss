@@ -42,13 +42,13 @@
 
 	@include mt;
 	overflow: hidden;
-	&.active {
+	&.start {
 
+		clip-path: polygon(calc((var(--col) - 1) / var(--cols) * 100%) 0, 
+		calc(var(--col) / var(--cols) * 100%) 0, 
+		calc(var(--col) / var(--cols) * 100%) 100%, 
+		calc((var(--col) - 1) / var(--cols) * 100%) 100%);
 	}
-	clip-path: polygon(calc((var(--col) - 1) / var(--cols) * 100%) 0, 
-	calc(var(--col) / var(--cols) * 100%) 0, 
-	calc(var(--col) / var(--cols) * 100%) 100%, 
-	calc((var(--col) - 1) / var(--cols) * 100%) 100%);
 	transform-origin: calc(((var(--col) - 1)+ var(--col))* 100%  / var(--cols)/ 2) 0;
 	&:nth-child(1) { 
 		position: relative;
