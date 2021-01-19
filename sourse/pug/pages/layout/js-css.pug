@@ -2,12 +2,15 @@ mixin allcss()
 	//- link(rel="stylesheet", href="libs/magnificPopup/magnific-popup.css")
 	//- link(rel="stylesheet", href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css")
 	//- link(rel="stylesheet", href="css/main.css")
-	link(href="css/main.min.css", rel="stylesheet")
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-mixin allcjs()
 	link(href="libs/swiper/css/swiper.min.css", rel="stylesheet")
 	//- link(rel="stylesheet", href="libs/slick-carousel/slick/slick.css")
 	link(href="libs/@fancyapps/fancybox/jquery.fancybox.min.css", rel="stylesheet")
+	link(href="css/main.min.css", rel="stylesheet")
+
+mixin allcjs()
 	//- link(rel="stylesheet", href="fonts/fontello/css/fontello.css")
 	//- script(src="libs/vue/vue.min.js")
 	//- script(src="js/app.js")
@@ -15,7 +18,7 @@ mixin allcjs()
 	
 	//- script(src="js/libs.js")
 
-	//- script(src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js")
+	script(src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js")
 
 	// modal libs
 	script(src="libs/jquery/jquery.slim.min.js")

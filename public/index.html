@@ -6,21 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>title</title>
 		<meta name="format-detection" content="telephone=no">
-		<meta name="format-detection" content="address=no">
-		<link rel="shortcut icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
-		<!-- Стили общие для всего сайта - Начало-->
-		<link rel="stylesheet" href="vendors/swiper/swiper.min.css">
-		<link rel="stylesheet" href="vendors/fancybox/jquery.fancybox.min.css">
-		<link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.min.css">
-		<link rel="stylesheet" href="styles/main.css">
-		<!-- Стили общие для всего сайта - Конец-->
-		<!-- Стили на этой странице - Начало-->
-		<link rel="stylesheet" href="templates/blocks/main-slider/main-slider.css">
-		<link rel="stylesheet" href="templates/blocks/brend-customer-sliders/sliders.css">
-		<link rel="stylesheet" href="templates/blocks/feedback-form/feedback.css">
-		<link rel="stylesheet" href="templates/blocks/about-block/about-block.css">
-		<link rel="stylesheet" href="templates/blocks/advantage-block/advantage-block.css">
-		<!-- Стили на этой странице - Конец-->
+		<meta name="format-detection" content="address=no"><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
@@ -53,66 +42,225 @@
 				</div>
 			</div>
 			<!--  мобильное меню-->
-			<!-- start header-->
-			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+			<div class="wrap">
+				<!-- start headerBlock-->
+				<div class="headerBlock section" id="headerBlock">
+					<!-- start topLine-->
+					<section class="topLine section" id="topLine">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="logo-block"><img src="img/@2x/logo.png" alt=""/>
+										<div>
+											<div class="logo-block__title">«Санто Арабика»
+											</div>
+											<div class="logo-block__text">Производим капсульный кофе стандарта Nespresso
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto d-md-none">
+									<div class="mass-block__item">
+										<svg class="icon icon-tel ">
+											<use xlink:href="img/svg/sprite.svg#tel"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="col-auto text-end d-none d-md-block">
+									<div class="row">
+										<div class="col-auto">
+											<div class="mass-block"><a class="mass-block__item" href="#">
+												<svg class="icon icon-telegram ">
+													<use xlink:href="img/svg/sprite.svg#telegram"></use>
+												</svg></a><a class="mass-block__item" href="#">
+												<svg class="icon icon-tel ">
+													<use xlink:href="img/svg/sprite.svg#tel"></use>
+												</svg></a>
+											</div>
+										</div>
+										<div class="col-auto"><a class="topLine__tel" href="tel8(800)4444444">8 (800) 444-44-44</a>
+										</div>
+									</div><a class="btn btn-dark" href="#">Перезвоните мне</a>
+								</div>
 							</div>
 						</div>
-						<div class="col">
-							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-								</li>
-							</ul>
+					</section>
+					<!-- end topLine-->
+					<!-- picture-->
+					<picture class="santo"> 
+						<noscript class="loading-lazy">
+							<source type="image/webp" srcset="img/@2x/webp/santo.webp" media="(min-width:576px)"/>
+							<source type="image/webp" srcset="img/@1x/webp/santo.webp"/>
+							<source type="image/png" srcset="img/@2x/santo.png" media="(min-width:576px)"/>
+							<source type="image/png" srcset="img/@1x/santo.png"/><img src="img/@2x/santo.png" alt="" loading="lazy"/>
+						</noscript>
+					</picture>
+					<!-- /picture-->
+					<div class="container">
+						<div class="headerBlock__title">
+							<h1>Оптовые поставки</h1>
+							<div class="row">
+								<div class="col-lg-auto">
+									<div class="headerBlock__lg">кофе
+									</div>
+								</div>
+								<div class="col-lg-auto">
+									<div class="headerBlock__text">в&nbsp;капсулах для кофемашин&nbsp;Nespresso
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="headerBlock__body">
+							<div class="headerBlock__row row">
+								<div class="headerBlock__col col-auto">
+									<div class="row g-0">
+										<div class="headerBlock__card bg-wrap col-12">
+											<!-- picture-->
+											<picture class="d-none d-lg-block picture-bg"> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/card-1.webp"/><img class="object-fit-js" src="img/@2x/card-1.jpg" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+											<div class="headerBlock__card-text">Лучшие моносорта и&nbsp;бленды кофе категории <strong>specialty</strong>
+											</div>
+										</div>
+										<div class="headerBlock__card bg-wrap col-lg-6">
+											<!-- picture-->
+											<picture class="d-none d-lg-block picture-bg"> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/card-2.webp"/><img class="object-fit-js" src="img/@2x/card-2.jpg" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+											<div class="headerBlock__card-text">Цена почти <strong> на&nbsp;30%&nbsp;ниже</strong> оригинала
+											</div>
+										</div>
+										<div class="headerBlock__card bg-wrap col-lg-6">
+											<!-- picture-->
+											<picture class="d-none d-lg-block picture-bg"> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/card-3.webp"/><img class="object-fit-js" src="img/@2x/card-3.jpg" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+											<div class="headerBlock__card-text">Доставка по&nbsp;всей России <strong> с&nbsp;отправкой в&nbsp;течение 2х&nbsp;дней</strong>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="headerBlock__col-right col">
+									<div class="headerBlock__link-wrap"><a class="headerBlock__link" href="#">Сначала расскажите, что не&nbsp;так с&nbsp;кофе, почему даете такую цену</a>
+									</div>
+									<div class="headerBlock__btn" Href="#">Получить тестовую партию бесплатно
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<!-- end headerBlock-->
 			</div>
-			<!-- end top-nav-->
-			<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">text</span>
-			</label>
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
+			<!-- start sBanner-->
+			<section class="sBanner section" id="sBanner">
+				<div class="container">
+					<div class="sBanner__title"><span>Santo Arabica —</span>
+					</div>
+					<div class="sBanner__text">мы&nbsp;переосмыслили идею капсульного кофе и&nbsp;заново изобрели его для вас
+					</div>
+				</div>
+			</section>
+			<!-- end sBanner-->
+			<!-- start sAbout-->
+			<section class="sAbout section" id="sAbout">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>topLine</h2>
+						<h2>sAbout</h2>
 					</div>
 					<div class="row"></div>
 				</div>
 			</section>
-			<!-- end topLine-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
+			<!-- end sAbout-->
+			<!-- start sUnique-->
+			<section class="sUnique section" id="sUnique">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+						<h2>sUnique</h2>
 					</div>
 					<div class="row"></div>
 				</div>
-			</div>
-			<!-- end headerBlock-->
+			</section>
+			<!-- end sUnique-->
+			<!-- start sSert-->
+			<section class="sSert section" id="sSert">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sSert</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sSert-->
+			<!-- start sBest-->
+			<section class="sBest section" id="sBest">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sBest</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sBest-->
+			<!-- start sTaste-->
+			<section class="sTaste section" id="sTaste">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sTaste</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sTaste-->
+			<!-- start sTextLg-->
+			<section class="sTextLg section" id="sTextLg">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sTextLg</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sTextLg-->
+			<!-- start sGuarantee-->
+			<section class="sGuarantee section" id="sGuarantee">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sGuarantee</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sGuarantee-->
+			<!-- start sMaterials-->
+			<section class="sMaterials section" id="sMaterials">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sMaterials</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sMaterials-->
+			<!-- start sCatalog-->
+			<section class="sCatalog section" id="sCatalog">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sCatalog</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sCatalog-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
@@ -123,6 +271,36 @@
 				</div>
 			</section>
 			<!-- end sForm-->
+			<!-- start sSert2-->
+			<section class="sSert2 section" id="sSert2">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sSert2</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sSert2-->
+			<!-- start sAsk-->
+			<section class="sAsk section" id="sAsk">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sAsk</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sAsk-->
+			<!-- start sGal-->
+			<section class="sGal section" id="sGal">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sGal</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sGal-->
 			<!-- start sContact-->
 			<section class="sContact section" id="sContact">
 				<div class="container">
@@ -133,103 +311,7 @@
 				</div>
 			</section>
 			<!-- end sContact-->
-			<footer>
-				<div class="footer-fixed">
-					<button class="defBtn Btn-Flamenco" id="makeOrderBtn">сделать заказ</button>
-				</div>
-				<div class="footer">
-					<div class="footer__top">
-						<div class="container">
-							<div class="footer__top-inner">
-								<ul class="def-ul">
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Продукция</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Трубопроводная и запорно-регулирующая арматура</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Детали трубопроводов</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Опоры трубопроводов</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Контрольно-измерительные приборы</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Отопительное оборудование</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Компенсаторы</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Уплотнители и крепеж</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Трубы</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Фитинги</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Теплоизоляция</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Канализационное оборудование</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Противопожарное оборудование</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Услуги</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Металлообработка</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">ППУ, ВУС, ППМ, ЦПИ изоляция</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Грунтовка и покраска металла</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Цинкование металла</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Контакты</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Контактная информация</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Напишите нам</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Обратный звонок</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Написать руководителю</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">О компании</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">О компании</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Новости </a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Вакансии</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink arrowDown" href="#">Клиентам</a></h3>
-										<ul class="def-ul">
-											<li><a class="defLink h-Flamenco-1" href="#">Как сделать заказ </a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Оплата</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Банковские реквизиты</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Юридическая информация </a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Статьи</a></li>
-											<li><a class="defLink h-Flamenco-1" href="#">Частые вопросы</a></li>
-										</ul>
-									</li>
-									<li class="firstStage">
-										<h3><a class="defLink" href="#">Доставка</a></h3>
-										<h3><a class="defLink" href="#">Личный кабинет</a></h3>
-										<h3><a class="defLink" href="#">Бренды</a></h3>
-									</li>
-									<li class="firstStage">
-										<div class="contacts"><a class="defLink logo" href="index.html"><img src="assets/svg/logo-white.svg" alt=""/></a>
-											<ul class="def-ul">
-												<li>Пн - Пт с 09:00 до 21:00</li>
-												<li>Сб - Вс с 11:00 до 19:00</li>
-											</ul><a class="defLink h-Flamenco-1 phone" href="tel:8(495)3747472">8 (495) 374-74-72</a><a class="defLink h-Flamenco-1" href="mailto:sales@staleron-group.ru">sales@staleron-group.ru</a>
-											<ul class="def-ul social-media">
-												<li><a href="#"><img src="../../../assets/svg/social-media01.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media02.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media03.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media04.svg" alt=""/></a></li>
-												<li><a href="#"><img src="../../../assets/svg/social-media05.svg" alt=""/></a></li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="footer__bottom">
-						<div class="container">
-							<div class="footer__bottom-inner">
-								<p>© ТПА24, 2019</p>
-							</div>
-						</div>
-					</div>
-					<div class="anchor"><i class="icon-1-0_arrow"></i></div>
-				</div>
-			</footer>
+			<footer class="footer"></footer>
 		</div>
 	</body>
 	<!--  start modals-->
@@ -256,8 +338,7 @@
 	</div>
 	<!-- #modal-call-->
 	<!-- end modals-->
-	<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
-	<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+	<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 	<!-- modal libs-->
 	<script src="libs/jquery/jquery.slim.min.js"></script>
 	<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>

@@ -458,3 +458,25 @@ iframe {
 		display: none
 	}
 }
+
+.btn-outline{
+	@include media-breakpoint-up(md){
+
+		font-size: rem(16);
+	}
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: rem(83); 
+	color: #feffd1;
+	border: 1px solid ;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	&:hover{
+		color: $body-color;
+		border-color:$primary;
+		background-color: $primary;
+	}
+}

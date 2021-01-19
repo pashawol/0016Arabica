@@ -3,6 +3,19 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sUnique/_sUnique.pug
+include ../blocks/sSert/_sSert.pug
+include ../blocks/sBest/_sBest.pug
+include ../blocks/sTaste/_sTaste.pug
+include ../blocks/sTextLg/_sTextLg.pug
+include ../blocks/sGuarantee/_sGuarantee.pug
+include ../blocks/sMaterials/_sMaterials.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sSert2/_sSert2.pug
+include ../blocks/sAsk/_sAsk.pug
+include ../blocks/sGal/_sGal.pug
 
 block variables
 	- let  mainPage= null
@@ -12,12 +25,23 @@ block title
 block pagecontent
 
 	+mob-mnu()
-	+header()
-	+top-nav()
-	+in-c("checkbox", "text")
-	+topLine() 
+	//- +header()
 	+headerBlock()
+		+topLine()
+	+sBanner
+	+sAbout
+	+sUnique
+	+sSert
+	+sBest
+	+sTaste
+	+sTextLg
+	+sGuarantee
+	+sMaterials
+	+sCatalog
 	+sForm()
+	+sSert2
+	+sAsk
+	+sGal
 	+sContact()
 	+footer()
 

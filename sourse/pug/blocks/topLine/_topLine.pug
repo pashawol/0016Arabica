@@ -2,8 +2,25 @@ mixin topLine()
 	// start topLine
 	+b.SECTION.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col
+					+b.logo-block
+						img(src="img/@2x/logo.png", alt="")
+						div
+							+e.title «Санто Арабика»
+							+e.text Производим капсульный кофе стандарта Nespresso
+				.col-auto.d-md-none
+					.mass-block__item
+						+icon("tel")
+				.col-auto.text-end.d-none.d-md-block
+					.row
+						.col-auto
+							+b.mass-block
+								+e.item(href="#")
+									+icon("telegram")
+								+e.item(href="#")
+									+icon("tel")
+						.col-auto
+							+e.tel(href=`tel${tels}`)= tel
+					a.btn.btn-dark(href="#") Перезвоните мне
 	// end topLine
