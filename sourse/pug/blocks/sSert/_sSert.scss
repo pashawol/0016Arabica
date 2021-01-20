@@ -1,6 +1,38 @@
 
 	// start .sSert
 	.sSert {
+		--sPT: #{rem(20)};
+		--sTPB: #{rem(30)};
+		--swiperArrowSize: #{rem(74)};
+		--swiperArrowPosition: #{rem(-15px)};
+		.section-title{
+			&__text{
+				color: #414141;
+			}
+		}
+		h2{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(1000);
+			@extend .h4; 
+			margin-bottom: rem(20);
+			span{
+				border-bottom: 1px dotted ;
+			}
+		}
+		&__slider{
+			max-width: rem(931);
+		}
+		&__wrap{
+			position: relative;
+			max-width: rem(1140);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.swiper-button-hand{
+			top: 50%;
+			margin-top: calc(-1 * var(--swiperArrowSize) / 2);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

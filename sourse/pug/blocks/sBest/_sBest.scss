@@ -1,6 +1,35 @@
 
 	// start .sBest
 	.sBest {
+			padding-top: 0;
+		&__col{
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+			margin-bottom: 40px;
+			@include media-breakpoint-up(lg){ 
+				margin-left:  0 !important;
+			}
+		}
+		&__left-block{ 
+			@include media-breakpoint-down(sm){
+				// margin-left: calc(-1 * var(--bs-gutter-x));
+				// margin-right: 0 !important;
+			}
+			@include media-breakpoint-up(md){
+				margin-left: 0 !important;
+				margin-right: calc( 100%  - 55vw - var(--bs-gutter-x));
+			 
+			} 
+			} 
+			&__lg{
+				text-align: right;
+				left: auto !important;
+				right: 0 !important;
+				width: auto;
+				max-width: none !important;
+			}
+			
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

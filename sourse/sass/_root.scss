@@ -20,15 +20,15 @@
 	--sTPB: #{rem(40 / 2)};
 
 
-		--swiperArrowSize: #{rem(68)};
+		--swiperArrowSize: #{rem(78)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: #ffffff;
+		--swiperColorDef: #696969;
+		--swiperBorderColorDef: var(--swiperColorDef);
+		--swiperBgDef: transparent;
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
-		--swiperColorDefHover: var(--bs-primary);
-		--swiperBgDefHover: #ffffff;
+		--swiperColorDefHover: var(--swiperColorDef);
+		--swiperBgDefHover: var(--bs-primary);
 
 
 	 

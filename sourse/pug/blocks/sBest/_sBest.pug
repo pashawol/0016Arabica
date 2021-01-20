@@ -1,9 +1,15 @@
 mixin sBest(data)
 	// start sBest
-	+b.SECTION.sBest.section#sBest&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sBest
-				
+	+b.sBest.section#sBest&attributes(attributes)
+		.container 
 			.row
+				+e.col.col-md-5
+					+e.text-block
+						.h4 #[strong Доверяем обжарку лучшим ]  в&nbsp;этом деле мастерам
+						+e.text Мы&nbsp;нашли опытных обжарщиков в&nbsp;России и&nbsp;посетили их&nbsp;производство.  Убедились, что зерна #[strong обжаривают #[span профессионально]&nbsp;&mdash; так, чтобы раскрыть вкус кофе максимально]
+				.col
+					+e.left-block
+						+pic('sBest-img','bg')
+					+e.lg насыщенный
+						span вкус
 	// end sBest
