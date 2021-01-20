@@ -2589,24 +2589,125 @@
 			<!-- start sGal-->
 			<section class="sGal section" id="sGal">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sGal</h2>
+					<div class="sGal__bgText">производство
 					</div>
-					<div class="row"></div>
+					<div class="section-title">
+						<div>
+							<h2>Компания «Санто Арабика»<br>находится в г. Магнитогорск </h2>
+							<div class="section-title__subtitle">Благодаря мощностям производства выполняем заказы любых объемов
+							</div>
+						</div>
+						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next d-none d-md-block sGal__sliderBtn">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="sGal__slider-wrap">
+					<div class="sGal__slider sGal__slider--js swiper-container">
+						<div class="swiper-wrapper">
+								<div class="sGal__slide swiper-slide"><img class="swiper-lazy" src="#" data-src="img/@2x/gal-1.jpg" alt=""/>
+								</div>
+								<div class="sGal__slide swiper-slide"><img class="swiper-lazy" src="#" data-src="img/@2x/gal-2.jpg" alt=""/>
+								</div>
+								<div class="sGal__slide swiper-slide"><img class="swiper-lazy" src="#" data-src="img/@2x/gal-3.jpg" alt=""/>
+								</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sGal-->
 			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
+			<div class="sContact section" id="sContact">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sContact</h2>
+					<div class="sContact__row row align-items-center">
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="sContact__col col-6 col-lg-12">
+									<div class="sContact__title">Адрес
+									</div>
+									<div class="sContact__text">Магнитогорск, ул. Суворова, д.115
+									</div>
+								</div>
+								<div class="sContact__col col-6 col-lg-12">
+									<div class="sContact__title">Телефон
+									</div><a class="sContact__text" href="tel:8(800)4214253">8 (800) 421-42-53</a>
+								</div>
+								<div class="sContact__col col-6 col-lg-12">
+									<div class="sContact__title">E-mail
+									</div><a class="sContact__text" href="mailto:info@coffee.ru">info@coffee.ru</a>
+								</div>
+								<div class="sContact__col col-6 col-lg-12">
+									<div class="sContact__title">Работаем
+									</div>
+									<div class="sContact__text">ежедневно, с 9:00 до 20:00
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="sContact__mapWrap"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7bd4fb555829e66d7c01811f8f0a640f90e4945f73efa2a8e49442669c7b27b3&amp;source=constructor"></iframe>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
-			</section>
+			</div>
 			<!-- end sContact-->
-			<footer class="footer"></footer>
+			<footer class="footer">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<noscript class="loading-lazy">
+						<source type="image/webp" srcset="img/@2x/webp/footer-bg.webp" media="(min-width:576px)"/>
+						<source type="image/webp" srcset="img/@1x/webp/footer-bg.webp"/>
+						<source type="image/jpg" srcset="img/@2x/footer-bg.jpg" media="(min-width:576px)"/>
+						<source type="image/jpg" srcset="img/@1x/footer-bg.jpg"/><img class="object-fit-js" src="img/@2x/footer-bg.jpg" alt="" loading="lazy"/>
+					</noscript>
+				</picture>
+				<!-- /picture-->
+				<div class="container">
+					<div class="row">
+						<div class="col d-none d-md-block">
+							<div class="logo-block"><img src="img/@2x/logo.png" alt=""/>
+								<div>
+									<div class="logo-block__title">«Санто Арабика»
+									</div>
+									<div class="logo-block__text">Производим капсульный кофе стандарта Nespresso
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer__col col-auto">
+							<div class="footer__write">Пишите по всем вопросам, <span class="dot"></span> мы онлайн
+							</div>
+							<div class="mass-block"><a class="mass-block__item" href="#"><span class="mass-block__iconWrap">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></span><span class="mass-block__text">Telegram</span></a><a class="mass-block__item" href="#"><span class="mass-block__iconWrap">
+								<svg class="icon icon-tel ">
+									<use xlink:href="img/svg/sprite.svg#tel"></use>
+								</svg></span><span class="mass-block__text">WhatsApp</span></a>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="footer__contactWrap"><a class="footer__tel" href="tel8(800)4444444">8 (800) 444-44-44</a><a class="footer__btn" href="#">Перезвоните мне</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__foot">
+					<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-sm-auto"><a class="footer__polite" href="#">Политика конфиденциальности</a>
+							</div>
+							<div class="col-sm-auto">
+								<div class="footer__dev"><span>Разработка сайта</span><a class="footer__devLogo" href="https://simonov.marketing" target="_blank"><img class="res-i" src="img/@2x/simonov.png" alt="" loading="lazy"/></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 	</body>
 	<!--  start modals-->

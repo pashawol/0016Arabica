@@ -337,6 +337,30 @@ function eventHandler() {
 			prevEl: '.sAbout .swiper-button-prev',
 		},
 	});
+
+	const gal = new Swiper('.sGal__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		spaceBetween: 10,
+		freeMode: true,
+		navigation: {
+			nextEl: '.sGal .swiper-button-next'
+			// prevEl: '.sAbout .swiper-button-prev',
+		},
+
+		breakpoints: {
+			768: { 
+				spaceBetween: 25,
+			},
+			
+			992: { 
+				spaceBetween: 50
+			},
+
+		},
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

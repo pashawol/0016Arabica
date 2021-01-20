@@ -332,6 +332,24 @@ function eventHandler() {
 			prevEl: '.sAbout .swiper-button-prev'
 		}
 	}));
+	var gal = new Swiper('.sGal__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		spaceBetween: 10,
+		freeMode: true,
+		navigation: {
+			nextEl: '.sGal .swiper-button-next' // prevEl: '.sAbout .swiper-button-prev',
+
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 25
+			},
+			992: {
+				spaceBetween: 50
+			}
+		}
+	}));
 }
 
 ;
