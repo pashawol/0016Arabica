@@ -309,13 +309,12 @@ function eventHandler() {
 
 	
 
-	let defaultSl = {
-		spaceBetween: 0,
+	let defaultSl = { 
 		lazy: {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
+	
 		loop: true,
 		
 		// pagination: {
@@ -332,11 +331,26 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 1,
+		spaceBetween: 0,
 		navigation: {
 			nextEl: '.sAbout .swiper-button-next',
 			prevEl: '.sAbout .swiper-button-prev',
 		},
 	});
+
+	
+	const swiper5 = new Swiper('.sSert__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 2,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sSert .swiper-button-next',
+			prevEl: '.sSert .swiper-button-prev',
+		},
+	});
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

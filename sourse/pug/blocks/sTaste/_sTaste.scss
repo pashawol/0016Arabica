@@ -1,7 +1,86 @@
 
 	// start .sTaste
 	.sTaste {
-		 
+		--sPT: #{rem(30)};
+		&__group{
+			// height: 790px;
+			background-color:  $body-color;
+			@include bgs;
+			background-image: url(../img/@2x/webp/sTaste-bg.webp);
+			color: #878787;
+			position: relative;
+			@include media-breakpoint-up(lg){
+				
+				min-height: 100vh;
+				min-height: calc(var(--vh, 1vh) * 100);
+				display: flex;
+				flex-direction: column;
+				// align-items: center;
+				justify-content: center;
+			}
+
+			picture{
+				@include media-breakpoint-up(lg) {
+
+					position: absolute;
+					left: 50%;
+					width: 50%;
+					height: 100%;
+					top: 0;
+				}
+			}
+		}
+		&__text-block{
+			max-width: rem(460);
+		}
+		.h6{
+			margin-bottom: 1em;
+			line-height: (31 / 21);
+			&--2{
+				max-width: rem(370);
+			}
+		}
+		.section-title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(870);
+			h2{
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: rem(20);
+			}
+		}
+		.container{
+			max-width: rem(1000);
+			padding-top: rem(60);
+			padding-bottom: rem(60);
+		}
+
+		&__link-block{
+			width: 100%;
+			max-width: rem(427px); 
+			border-radius: $border-radius;
+			background-color: #ffffff;
+			padding: rem(25) rem(33);
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+
+				left: 50%;
+				margin-left: rem(40);
+			}
+			left: 0;
+			bottom: rem(66);
+			z-index: 2;
+		}
+
+		&__link{
+			color: #494949 !important;
+			border-bottom: 1px dashed;
+			&:hover{
+				border-color: transparent;
+			}
+		}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
