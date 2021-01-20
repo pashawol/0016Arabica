@@ -1,7 +1,60 @@
 
 	// start .sAbout
 	.sAbout {
-		 
+		color: #ffffff;
+		--sPB: 0;
+		background-color: $body-color;
+		h2{
+			// @include rfs(28px);
+			font-size: rem(28px);
+			text-transform: uppercase;
+		}
+
+		&__contact-block{
+			border-radius: rem(4);
+			background-image: url(../img/@2x/gradient.jpg);
+			@include bgs;
+			padding: rem(35) rem(33);
+			padding-right: rem(20);
+			color: $body-color;
+			margin-bottom: rem(70);
+			&-text{
+				font-weight: 500;
+				margin-bottom: rem(16);
+			}
+		}
+		 &__btn{
+			 @extend .btn;
+			 @extend .btn-outline-body;
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+			 font-size: rem(14);
+			 margin-right: rem(10);
+			 margin-left: 1.5px;
+			 margin-right: 1.5px;
+			 flex-grow: 1;
+			 position: relative;
+			 .icon{
+				 font-size: rem(20);
+				 margin-right: 6px;
+
+			 }
+		 }
+		 &__label{
+
+		 }
+		 &__btns{
+				display: flex;
+				margin-left: -1.5px;
+				margin-right: -1.5px;
+		 }	
+		 &__slider-wrap{
+			 position: relative;
+			 .swiper-wrapper{
+				 align-items: flex-end;
+			 }
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

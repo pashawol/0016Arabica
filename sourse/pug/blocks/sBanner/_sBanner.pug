@@ -1,8 +1,9 @@
 mixin sBanner(data)
 	// start sBanner
 	+b.SECTION.sBanner.section#sBanner&attributes(attributes)
-		.container
+		+e.container.container
 			+e.title
 				span Santo Arabica —
 			+e.text мы&nbsp;переосмыслили идею капсульного кофе и&nbsp;заново изобрели его для вас
+		+pic('text-vertical.png').sBanner__text
 	// end sBanner

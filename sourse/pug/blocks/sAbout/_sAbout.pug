@@ -1,9 +1,44 @@
 mixin sAbout(data)
 	// start sAbout
-	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+	+b.SECTION.sAbout.section.bg-wrap#sAbout&attributes(attributes)
+		+pic("dark-bg.jpg",'bg').picture-bg
 		.container
 			+b.section-title.text-center
-				h2 sAbout
-				
+				h2 Мы&nbsp;хотели, чтобы яркий незабываемый аромат и&nbsp;натуральный  вкус кофе,будто только что приготовленный опытным бариста, был доступен каждому. И&nbsp;у&nbsp;нас получилось!
 			.row
+				.col-6
+					+e.slider-wrap
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									+e.slide.swiper-slide
+										img.swiper-lazy(src="#" data-src="img/@2x/team.png", alt="")
+						+arrow
+				.col-6
+					p Решение, что это будет кофе в&nbsp;капсулах приняли сразу&nbsp;&mdash; больше года сохраняет весь свой вкус, готовится меньше минуты и&nbsp;не&nbsp;доставляет хлопот с&nbsp;&laquo;убеганием&raquo; из&nbsp;турки. 
+
+					p: span Оставалось обеспечить богатый вкус и&nbsp;цену...
+
+					p: span Пришлось детально изучить все #[strong факторы, влияющие  на&nbsp;вкус:] сорт, место произрастания, погодные условия  при созревании урожая, метод обработки ягод, их&nbsp;качество, срок и&nbsp;условия перевозки и&nbsp;хранения, обжарка, помол, различные нюансы приготовления. 
+
+					p:span Мы&nbsp;переговорили практически со&nbsp;всеми известными производителями и&nbsp;обжарщиками кофе, а&nbsp;некоторых посетили лично. Наладили поставки зерна, запустили свою линию по&nbsp;производству капсул.
+					p: strong Благодаря нашим ноу-хау в&nbsp;процессе производства мы&nbsp;снизили себестоимость капсул и&nbsp;теперь представляем вам достойного конкурента оригинальным капсулам по&nbsp;доступной цене.
+					+e.contact-block
+						+e.contact-block-text Давайте обсудим #[strong ваш первый заказ]&nbsp;&mdash; свяжитесь с&nbsp;нами удобным вам способом и&nbsp;мы&nbsp;рассчитаем стоимость партии нужного объема на&nbsp;специальных условиях
+						+e.btns
+							+e.btn(href="#")
+								+e.label
+								+icon('whatsapp')
+								| WhatsApp
+								
+							+e.btn(href="#")
+								+icon('viber')
+								| Viber
+							+e.btn(href="#")
+								+icon('telegram')
+								| Telegram
+							+e.btn(href="#")
+								+icon('call')
+								| Звонок
+
 	// end sAbout

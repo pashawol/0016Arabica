@@ -33,10 +33,14 @@
 }
 // start .topLine
 .topLine {
+	@include media-breakpoint-up(xxl){
+		--sPB: #{rem(80)}; 
+		--sPT: #{rem(38)};
+	}
 	@include media-breakpoint-up(sm) {
 
-		--sPT: #{rem(38)};
-		--sPB: #{rem(80)}; 
+		// --sPT: #{rem(38)};
+		--sPB: #{rem(20)}; 
 	}
 	--sPT: #{rem(20)};
 	--sPB: #{rem(50)}; 

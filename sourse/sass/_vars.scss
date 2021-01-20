@@ -73,6 +73,9 @@ $danger: $red !default;
 $light: #f3f3f3 !default;
 $dark: #3a3a3a !default;
 
+
+$body-color: #000000 !default;
+
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
   "secondary": $secondary,
@@ -81,7 +84,9 @@ $theme-colors: ("primary": $primary,
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark) !default;
+  "dark": $dark,
+  "body": $body-color
+  ) !default;
 // scss-docs-end theme-colors-map
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
@@ -262,7 +267,7 @@ $position-values: (0: 0,
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: #000000 !default;
+
 $body-text-align: null !default;
 
 

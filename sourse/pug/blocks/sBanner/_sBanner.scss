@@ -10,6 +10,22 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		position: relative;
+		overflow: hidden;
+		picture{
+			position: absolute;
+			top: 70px;
+			@include media-breakpoint-up(md) {
+				right: 136px;
+			}
+			right: 30px;
+		}
+		&__container{
+			position: relative;
+			transform: translateY(200%);
+			opacity: 0;
+			@include mt;
+		}
 		&__title{
 			@include rfs(81px);
 			text-transform: uppercase;
