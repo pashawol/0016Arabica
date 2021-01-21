@@ -1,9 +1,26 @@
 mixin sSert2(data)
 	// start sSert2
 	+b.SECTION.sSert2.section#sSert2&attributes(attributes)
+		+pic('gradient-lg','bg')(class="picture-bg")
 		.container
-			+b.section-title.text-center
-				h2 sSert2
+
 				
 			.row
+				.col-lg-6
+					+b.section-title
+						h4 Вся продукция имеет сертификаты качества государственного образца
+						h6 Если вас не&nbsp;устроило качество нашего кофе, просто сообщите нам об&nbsp;этом.<br> Мы&nbsp;вернем деньги или заменим партию
+					+e.btn(href="#") Делаю первый заказ
+				.col-lg-6
+					+e.wrap
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								+e.slide.swiper-slide
+									+e.img-wrap(href="img/@2x/sert-1.jpg" data-fancybox="ser-gal")
+										img.res-i.swiper-lazy(src="#" data-src="img/@2x/sert-1.jpg", alt="")
+								+e.slide.swiper-slide
+									+e.img-wrap(href="img/@2x/sert-2.jpg" data-fancybox="ser-gal")
+										img.res-i.swiper-lazy(src="#" data-src="img/@2x/sert-2.jpg", alt="")
+						+e.control
+							+arrow
 	// end sSert2

@@ -411,6 +411,39 @@ function eventHandler() {
 			}
 		}
 	}));
+	var delivery = new Swiper('.sDelivery__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.sDelivery .swiper-button-next',
+			prevEl: '.sDelivery .swiper-button-prev'
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 20
+			},
+			992: {
+				spaceBetween: 30
+			}
+		},
+		lazy: {
+			loadPrevNextAmount: 5
+		}
+	}));
+	var sert = new Swiper('.sSert2__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sSert2 .swiper-button-next',
+			prevEl: '.sSert2 .swiper-button-prev'
+		},
+		breakpoints: {
+			480: {
+				slidesPerView: 2
+			}
+		}
+	}));
 }
 
 ;

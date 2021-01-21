@@ -70,7 +70,7 @@
 			margin-right: rem(8);
 		}
 
-		&:hover {
+		&:hover, &.active {
 			color: #ffffff;
 			background-color: $body-color;
 

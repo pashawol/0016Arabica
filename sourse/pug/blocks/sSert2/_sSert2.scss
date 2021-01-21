@@ -1,15 +1,85 @@
+// start .sSert2
+.sSert2 {
+	position: relative;
+	--sPB: #{rem(60)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(118)};
+		--sPB: #{rem(126)};
+	}
 
-	// start .sSert2
-	.sSert2 {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
+	h6 {
+		font-weight: 500;
+	}
+
+	h4 {
+		font-weight: 600;
+	}
+
+	&__btn {
+		@extend .btn;
+		border: 1px solid #fffbd0;
+		font-size: rem(16px);
+		color: #feffd1;
+		text-transform: uppercase;
+		min-width: rem(318);
+		min-height: rem(83);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		letter-spacing: rem(0.8px);
+
+		&:hover {
+			background-color: #feffd1;
+		}
+	}
+
+	.row {
+
+		@include media-breakpoint-up(xl) {
+			@include roww(68px);
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		
+		@include media-breakpoint-up(lg) {
+			margin-right: calc(-50vw - -76%);
+		}
+	}
+
+	&__control {
+		position: absolute;
+		left: rem(-90);
+		bottom: 0;
+
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-direction: column-reverse;
+			.swiper-button-hand {
+				position: relative;
+				left: auto;
+				right: auto;
+				bottom: auto;
+				top: auto;
+				margin-top: rem(16);
+			}
+		}
+	}
+
+	&__slider {
+
+
+	}
+
+
+
+
+
+
 	@include media-breakpoint-up(sm) {}
-	//
 	@include media-breakpoint-between(md, xl) { }
-	//
 	@include media-breakpoint-only(xl) {}
-	//
 	@include media-breakpoint-down(xl) {}
 } // end.sSert2

@@ -9,7 +9,7 @@ mixin sAsk(data)
 			.row.justify-content-center
 				mixin item(i,t)
 					.col-sm
-						+e.btn(href="#")
+						+e.btn(href="#")&attributes(attributes)
 							+e.wrap
 								+e.iconWrap
 									+icon(i)
@@ -17,7 +17,7 @@ mixin sAsk(data)
 							+e.call Написать в мессенджере
 
 
-				+item('whatsapp','WhatsApp')
+				+item('whatsapp','WhatsApp').active
 				+item('telegram','Telegram')
 				+item('call','Обратный звонок')
 

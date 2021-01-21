@@ -420,6 +420,49 @@ function eventHandler() {
 		}
 	});
 
+	
+	const delivery = new Swiper('.sDelivery__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.sDelivery .swiper-button-next',
+			prevEl: '.sDelivery .swiper-button-prev',
+		},
+
+		breakpoints: {
+			768: { 
+				spaceBetween: 20,
+			},
+			992: { 
+				spaceBetween: 30
+			},
+		},
+
+		lazy: {
+			loadPrevNextAmount: 5,
+		},
+	});
+
+	const sert = new Swiper('.sSert2__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sSert2 .swiper-button-next',
+			prevEl: '.sSert2 .swiper-button-prev',
+		},
+		breakpoints: {
+		
+			480: {
+				slidesPerView: 2
+			},
+		
+		}
+	});
 
 };
 if (document.readyState !== 'loading') {
