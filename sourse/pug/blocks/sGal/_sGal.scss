@@ -27,9 +27,18 @@
 
 	&__bgText {
 		position: absolute;
-		bottom: rem(10);
-		left: rem(40);
-		@include rfs(106px);
+		bottom: rem(15);
+		left: rem(20);
+		font-size: 25px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(70);
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(106);
+			bottom: rem(10);
+			left: rem(40);
+
+		}
 		line-height: 1;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -43,26 +52,40 @@
 
 	&__sliderBtn {
 		position: relative;
+		place-items: center;
+		flex-shrink: 0;
 	}
 
 	&__slide {
 		height: auto;
-		max-height: 595px;
-		width: 45.5vw;
+		// max-height: 595px;
+		width: auto;
 		// max-width: 871px;
 		position: relative;
 		overflow: hidden;
 		@include mt(1);
+		// @include block(871,595)
 
 		img {
-			width: 100%;
-			height: 100%;
+			max-width: 100%;
+			// height: 100%;
+			height: 105px;
+			@include media-breakpoint-up(sm) {
+				height: rem(300);
+			}
+			@include media-breakpoint-up(lg){
+				height: rem(595px);
+			}
 			object-fit: cover;
 		}
 
 		&:not(.swiper-slide-active) {
 			filter: grayscale(100%);
 		}
+	}
+
+	&__imgWrap {
+
 	}
 
 
@@ -75,7 +98,7 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(sm) {
 		.container {
-			position: relative;
+			// position: relative;
 		}
 	}
 } // end.sGal

@@ -355,6 +355,9 @@ function eventHandler() {
 			992: {
 				spaceBetween: 50
 			}
+		},
+		lazy: {
+			loadPrevNextAmount: 5
 		}
 	}));
 	var swiper5 = new Swiper('.sSert__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {

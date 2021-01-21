@@ -358,7 +358,10 @@ function eventHandler() {
 			992: { 
 				spaceBetween: 50
 			},
+		},
 
+		lazy: {
+			loadPrevNextAmount: 5,
 		},
 	});
 	
