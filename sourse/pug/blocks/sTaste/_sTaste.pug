@@ -1,19 +1,20 @@
 mixin sTaste(data)
 	// start sTaste
 	+b.SECTION.sTaste.section#sTaste&attributes(attributes)
-		.container
-			+b.section-title.text-center
+		.container.pb-0
+			+b.section-title.text-lg-center
 				h2 Обеспечиваем великолепный вкус кофе,
 				+e.text.h6 уделяя максимум  внимания #[strong точности помола и&nbsp;количеству кофе в&nbsp;капсуле]
 		mixin item(i,l)
 			+e.group
-				.container
-					+e.text-block
-						block
+				+e.img-wrap
+					+pic(`sTaste-img-${i}.jpg`,'bg')
 					if l
 						+e.link-block
 							+e.link(href="#") Однородность помола гарантирует одинаковый вкус кофе в&nbsp;каждой порции
-				+pic(`sTaste-img-${i}.jpg`,'bg')
+				.container
+					+e.text-block
+						block
 			// /+e.group
 		+item(1,'l')
 			.h6 Помол должен быть таким, чтобы извлекать из&nbsp;кофе&nbsp;20% растворимых твердых веществ за&nbsp;12-20 секунд&nbsp;&mdash; именно столько времени нужно кофемашине на&nbsp;приготовление чашки напитка.

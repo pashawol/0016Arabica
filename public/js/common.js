@@ -285,9 +285,10 @@ function eventHandler() {
 	}(navigator.userAgent || navigator.vendor || window.opera); // we'd only like to use iScroll for mobile...
 
 
-	if (!isMobile) {
-		var controller = new ScrollMagic.Controller(); // define movement of panels
+	var controller = new ScrollMagic.Controller();
 
+	if (!isMobile) {
+		// define movement of panels
 		var wipeAnimation = new TimelineMax().to(".headerBlock", .1, {
 			className: "+=start"
 		}) // .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
@@ -313,6 +314,27 @@ function eventHandler() {
 			triggerHook: "onLeave",
 			duration: "60%"
 		}).setPin(".header").setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
+		var tween = new TimelineMax().add([TweenMax.fromTo(".cap-1", 1, {
+			y: 150
+		}, {
+			y: -50
+		}), TweenMax.fromTo(".cap-2", 1, {
+			y: 50
+		}, {
+			y: -100
+		}), TweenMax.fromTo(".cap-3", 1, {
+			y: 100
+		}, {
+			y: -50
+		})]); // build scene
+
+		var scene = new ScrollMagic.Scene({
+			triggerElement: ".sMaterials__caps-wrap",
+			duration: '80%',
+			offset: 0
+		}).setTween(tween) // .setPin(".sMaterials")
+		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 	}
 
@@ -361,11 +383,32 @@ function eventHandler() {
 		}
 	}));
 	var swiper5 = new Swiper('.sSert__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 2,
+		slidesPerView: 1,
 		spaceBetween: 30,
 		navigation: {
 			nextEl: '.sSert .swiper-button-next',
 			prevEl: '.sSert .swiper-button-prev'
+		},
+		breakpoints: {
+			480: {
+				slidesPerView: 2
+			}
+		}
+	}));
+	var swiper6 = new Swiper('.sCatalog__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sCatalog .swiper-button-next',
+			prevEl: '.sCatalog .swiper-button-prev'
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			992: {
+				slidesPerView: 3
+			}
 		}
 	}));
 }

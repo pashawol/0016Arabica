@@ -2,8 +2,21 @@ mixin sMaterials(data)
 	// start sMaterials
 	+b.SECTION.sMaterials.section#sMaterials&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sMaterials
-				
 			.row
+				.col-md-6
+					h2 #[strong Изготавливаем капсулы] из&nbsp;#[span безвредных пищевых полимеров]&nbsp;&mdash;
+					p того&nbsp;же материала, который используется для упаковки детского питания и&nbsp;многих других продуктов.
+					p Упаковываем капсулы в&nbsp;защитной газовой среде, поэтому #[span хранить их&nbsp;можно до&nbsp;18&nbsp;месяцев без потери вкуса]
+
+					p Аналогично капсулам из&nbsp;алюминиевой фольги капсулы &laquo;Санто Арабика&raquo; отлично сохраняют герметичность, не&nbsp;пропускают солнечный свет и&nbsp;влагу, #[strong но&nbsp;в&nbsp;производстве в&nbsp;разы дешевле.]
+					+e.black Так мы&nbsp;делаем доступным кофе, который в&nbsp;розницу стоит от&nbsp;2&nbsp;000&nbsp;Р за&nbsp;кг
+				.col
+					+e.caps-wrap
+						+pic("caps-1.png",'',0).cap-1
+						+pic("caps-2.png",'',0).cap-2
+						+pic("caps-3.png",'',0).cap-3
+					+e.text
+						+icon("recycle")
+						| Наши капсулы могут вторично перерабатываться&nbsp;&mdash; так мы&nbsp;бережем природу
+				
 	// end sMaterials

@@ -1,6 +1,51 @@
 
 	// start .sGuarantee
 	.sGuarantee {
+		padding-bottom: 0;
+
+		.section-title{
+			@include bgs;
+			background-image: url(../img/@2x/title-bg.jpg);
+			color: #ffffff;
+			max-width: none !important;
+			padding-bottom: 0;
+			h2{
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(950);
+				margin-bottom: 0 !important;
+			}
+		}
+		.h4{
+			color: #ffffff;
+			margin-bottom: rem(50);
+		}
+		&__link-block{
+			position: static !important;
+			margin-left: 0 !important;
+			max-width: rem(380);
+		}
+		&__link{
+
+			position: relative;
+			&::after{
+			content: '?';
+			width: 1.4em;
+			height: 1.4em;
+			border-radius: 50%;
+			position: absolute;
+			right: -1.5em;
+			// font-size: .5em;
+			font-size: .7em;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			// display: block;
+			// top: 0;
+			color: #ffffff;
+			background-color: #000000;
+		}
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

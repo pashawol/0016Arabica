@@ -6,6 +6,22 @@ mixin sAbout(data)
 			+b.section-title.text-center
 				h2 Мы&nbsp;хотели, чтобы яркий незабываемый аромат и&nbsp;натуральный  вкус кофе,будто только что приготовленный опытным бариста, был доступен каждому. И&nbsp;у&nbsp;нас получилось!
 			.row
+				.col-xl-6.d-flex.align-items-end
+					+e.slider-wrap
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									+e.slide.swiper-slide
+										+e.PICTURE.img-wrap
+											source.swiper-lazy(media="(min-width: 1200px)", srcset="#" data-srcset="img/@2x/team.png")
+											img.res-i.swiper-lazy(src="#" data-src="img/@1x/team.png", alt="")
+										+e.caption
+											strong Елена Глухова
+											| Соучредитель
+											br
+											| ООО «Санто Арабика»
+
+						+arrow
 				.col-xl-6.order-xl-last
 					+e.text-block
 						p Решение, что это будет кофе в&nbsp;капсулах приняли сразу&nbsp;&mdash; больше года сохраняет весь свой вкус, готовится меньше минуты и&nbsp;не&nbsp;доставляет хлопот с&nbsp;&laquo;убеганием&raquo; из&nbsp;турки. 
@@ -19,9 +35,10 @@ mixin sAbout(data)
 						+e.contact-block
 							+e.contact-block-text Давайте обсудим #[strong ваш первый заказ]&nbsp;&mdash; свяжитесь с&nbsp;нами удобным вам способом и&nbsp;мы&nbsp;рассчитаем стоимость партии нужного объема на&nbsp;специальных условиях
 							+e.btns
-								+e.btn(href="#")
-									+e.label
-									+icon('whatsapp')
+								+e.btn.active(href="#")
+									span
+										+e.DIV.label
+										+icon('whatsapp')
 									| WhatsApp
 									
 								+e.btn(href="#")
@@ -33,19 +50,5 @@ mixin sAbout(data)
 								+e.btn(href="#")
 									+icon('call')
 									| Звонок
-				.col-xl-6.d-flex.align-items-end
-					+e.slider-wrap
-						+e.slider--js.swiper-container
-							.swiper-wrapper
-								- for (var x = 0; x < 3; x++)
-									+e.slide.swiper-slide
-										img.res-i.swiper-lazy(src="#" data-src="img/@2x/team.png", alt="")
-										+e.caption
-											strong Елена Глухова
-											| Соучредитель
-											br
-											| ООО «Санто Арабика»
-
-						+arrow
 
 	// end sAbout

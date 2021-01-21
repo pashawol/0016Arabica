@@ -1,7 +1,28 @@
 
 	// start .sTextLg
 	.sTextLg {
-		 
+		--sTPB:0;
+		@include media-breakpoint-up(lg) {
+
+			--sPT: #{rem(95)};
+			--sPB: #{rem(45)};
+		}
+		 .section-title{
+			// max-width: rem(1110);
+		 }
+		 h2{
+			 margin-bottom: rem(40);
+			 margin-left: auto;
+			 margin-right: auto;
+			 max-width: rem(950);
+			 strong{
+				 display: inline-block;
+			 }
+		 }
+		 p{ 
+			 @extend .h4;
+			 font-weight: bold;
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

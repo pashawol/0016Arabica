@@ -3,7 +3,29 @@ mixin sCatalog(data)
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sCatalog
+				h2 Сформируйте партию specialty coffee #[strong по&nbsp;лучшей на&nbsp;сегодняшний день стоимости]
 				
-			.row
+			+e.wrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide( i,r,t,p)
+							+e.slide.swiper-slide
+								+e.item
+									+e.img-wrap(href="#"  )
+										if r
+											+e.alert.text-danger= r
+										img.res-i.swiper-lazy(src="#" data-src=`img/@2x/prod-${i}.png`, alt="")
+									+e.title= t
+									p= p
+									+e.price 250 ₽
+						+slide(`1`,`25 ₽ за капсулу`,`Colombia Specialty`,`Ноты высоко-кислых цитрусовых фруктов: апельсина, мандарина. А также к уантро (апельсинового ликера)`)
+						+slide(`2`,`25 ₽ за капсулу`,`Guatemala Specialty`,`Ноты сочных фруктовых вкусов: абрикоса, сушеного инжира, груши и карамельной сладости`)
+						+slide(`3`,`25 ₽ за капсулу`,`Nicaragua Specialty`,`Ноты какао, грецкого ореха и шоколада`)
+						
+
+
+
+
+				+e.control
+					+arrow
 	// end sCatalog
