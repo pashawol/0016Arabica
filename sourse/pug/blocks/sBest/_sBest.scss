@@ -2,11 +2,8 @@
 	// start .sBest
 	.sBest {
 			padding-top: 0;
-		&__col{
-			@include media-breakpoint-up(md) {
-				margin-bottom: 0;
-			}
-			margin-bottom: 40px;
+			padding-bottom: rem(40);
+		&__col{ 
 			@include media-breakpoint-up(lg){ 
 				margin-left:  0 !important;
 			}
@@ -23,10 +20,13 @@
 			} 
 			} 
 			&__lg{
-				text-align: right;
-				left: auto !important;
-				right: 0 !important;
-				width: auto;
+				@include media-breakpoint-up(md){
+
+					text-align: right;
+					left: auto !important;
+					right: 0 !important;
+					width: auto;
+				}
 				max-width: none !important;
 			}
 			

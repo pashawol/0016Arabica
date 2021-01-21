@@ -2,7 +2,7 @@ mixin sSert(data)
 	// start sSert
 	+b.SECTION.sSert.section#sSert&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-md-center
 				h2 #[strong Все лоты кофе&nbsp;&mdash; #[span 100% арабика] категории specialty] с&nbsp;лучших ферм Африки и&nbsp;Латинской Америки
 				+e.text.h6 На&nbsp;каждый лот международный сертификат о&nbsp;происхождении
 			+e.wrap
@@ -14,5 +14,6 @@ mixin sSert(data)
 						+e.slide.swiper-slide
 							+e.img-wrap(href="img/@2x/sert-2.jpg" data-fancybox="ser-gal")
 								img.res-i.swiper-lazy(src="#" data-src="img/@2x/sert-2.jpg", alt="")
-				+arrow
+				+e.control
+					+arrow
 	// end sSert

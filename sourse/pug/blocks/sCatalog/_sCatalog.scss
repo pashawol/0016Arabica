@@ -1,7 +1,109 @@
 
 	// start .sCatalog
 	.sCatalog {
-		 
+		background-color: $body-color;
+		background-image: url(../img/@2x/webp/catalog-bg.webp);
+		color: #ffffff;
+		--sPT: #{rem(112)};
+		--swiperArrowSize: #{rem(74)};
+		@include media-breakpoint-up(xl) {
+			--swiperArrowPosition: #{rem(-75px)};
+		}
+		--swiperArrowPosition: #{rem(-15px)};
+	 
+		h2{
+			margin-left: auto;
+			margin-right: auto;
+			text-transform: uppercase;
+			max-width: rem(1150);
+		}
+		 &__slider{
+			 max-width: 1170px;
+			 
+		 }
+
+		 &__wrap{
+			 position: relative;
+			}
+			&__item{
+				@include media-breakpoint-up(xl) {
+	
+					padding: rem(40);
+				 }
+				 padding: rem(40) rem(20);
+				display: flex;
+				flex-direction: column;
+				 height: 100%;
+				 max-width: rem(440);
+				 margin-left: auto;
+				 margin-right: auto;
+				 background-color: #2f2f2f;
+			}
+			&__slide{
+				height: auto;
+			}
+		 &__img-wrap{
+			 display: block;
+			 text-align: center;
+			 height: 240px;
+			 display: flex;
+			 align-items: flex-end;
+			 justify-content: center;
+			 margin-bottom: rem(24);
+			 position: relative;
+		 }
+		 &__alert{
+			 position: absolute;
+			 line-height: normal;
+			 top: 0;
+			 left: 0;
+		 }
+		 &__title{
+			 @extend .h5;
+			 font-weight: bold;
+			 margin-bottom: rem(20);
+		 }
+		 p{
+			color: #a1a1a1;
+			font-weight: 500;
+			font-size: rem(16);
+			margin-bottom: auto;
+			padding-bottom: rem(10);
+			padding-bottom: rem(42);
+		 }
+		 &__price{
+			 font-weight: bold;
+			 font-size: rem(20);
+			 @include media-breakpoint-up(xl) {
+
+				 padding-bottom: rem(30);
+			 }
+		 }
+
+
+		 @include media-breakpoint-down(md) {
+			.section-title{
+				text-align: left;
+			}
+			&__control{
+				position: relative;
+				width: calc(var(--swiperArrowSize) * 3);
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: rem(50);
+				height: var(--swiperArrowSize);
+				@include media-breakpoint-down(sm){ 
+					--swiperArrowSize: #{rem(46)};
+					--swiperArrowPosition: 0;
+				}
+			}
+		}
+
+		.swiper-button-hand{
+			top: 50%;
+			margin-top: calc(-1 * var(--swiperArrowSize) / 2);
+		}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

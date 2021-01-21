@@ -8,8 +8,9 @@
 	width: 100%;
 	height: 100%;
 	background-position: center 0;
-	background-position: center -11432px;
+	// background-position: center -11432px;
 	opacity: 0;
+	// display: none;
 	// opacity: 0.7;
 } 
 
@@ -85,7 +86,10 @@ body {
 	}
 }
 
-// .main-wrapper { 
+.main-wrapper {
+	position: relative;
+	overflow: hidden;
+}
 // 	display: flex;
 // 	flex-direction: row; 
 // 	// overflow: scroll;

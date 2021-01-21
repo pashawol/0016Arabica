@@ -1,9 +1,26 @@
 mixin sGuarantee(data)
 	// start sGuarantee
 	+b.SECTION.sGuarantee.section#sGuarantee&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sGuarantee
-				
-			.row
+		+b.section-title.text-lg-center
+			.container
+				h2 #[strong Гарантируем]&nbsp;&mdash; чашка ароматного кофе получается #[strong из&nbsp;каждой] нашей капсулы
+		mixin item(i,l)
+			+e.group
+				+e.img-wrap
+					+pic(`sGuarantee-${i}.jpg`,'bg')
+				.container
+					+e.text-block
+						block
+			// /+e.group
+		+item(1,'l')
+			.h4 Бывает, что кофе из&nbsp;капсул не&nbsp;оправдывает ожиданий&nbsp;&mdash; получается водянистым и&nbsp;не&nbsp;вкусным. Почему так?
+			+e.link-block
+				| При больших объемах помола теряется его однородность, что критически влияет на вкус  
+				br
+				+e.link(href="#")  и протекание капсулы
+		+item(2,'l') 
+			.h4 Что мы&nbsp;сделали, чтобы вкус и&nbsp;аромат кофе оставался идеальным  от&nbsp;капсулы к&nbsp;капсуле?
+			.h6 Все просто. Мы&nbsp;сделали наш помол идеальным несмотря на&nbsp;объем.
+
+			.h6 Как? Мы&nbsp;сушим, замораживаем, трясем, а&nbsp;потом вручную перетираем на&nbsp;терке. Шутка:) Естественно, это наш секрет.
 	// end sGuarantee
