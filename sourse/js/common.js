@@ -316,6 +316,18 @@ function eventHandler() {
 								// .addIndicators() // add indicators (requires plugin)
 								.addTo(controller);
  
+			var tween = new TimelineMax ()
+					.add([
+						TweenMax.fromTo(".man", 1, {y: 100}, {y: -50})
+					]);
+
+				// build scene
+				var scene = new ScrollMagic.Scene({triggerElement: ".s-form", duration: '80%', offset: 0})
+								.setTween(tween)
+								// .setPin(".sMaterials")
+								// .addIndicators() // add indicators (requires plugin)
+								.addTo(controller);
+ 
 
 	
 

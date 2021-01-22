@@ -1,0 +1,35 @@
+
+	// start .sCompBrand
+	.sCompBrand {
+		background-color: #191919;
+		color: #ffffff;
+		h2{
+			text-transform: uppercase;
+			@extend .h4;
+			font-weight: bold;
+			line-height: (51 / 35);
+		}
+		&__wrap{
+			max-width: rem(380);
+			position: relative;
+		
+		}
+		picture{
+			position: absolute;
+			left: 100%;
+			top: 0;
+			display: block;
+			width: rem(655);
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sCompBrand

@@ -1,20 +1,68 @@
 .form-wrap{
+	&__input-with-icon{
+	 
+	}
+	
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(20);
+			label{
+				position: relative;
+				.icon{
+						font-size: rem(23);
+						position: absolute;
+						left: rem(22);
+						color: #8a8a8a;
+						bottom: rem(20);
+						 
+				}
+				.form-control{
+					padding-left: rem(50);
+				}
+			}	
 		}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
- 	}
+	 }
+	 &__input-title{
+		color: #0e0e0e;
+		font-weight: 500;
+		display: block;
+		margin-bottom: rem(10);
+	 }
  	&__btn{
  		cursor: pointer;
- 	}
+		 font-size: 16px;
+		 font-weight: 700;
+		 @extend .btn;
+		 @extend .btn-primary;
+		 display: block;
+		 width: 100%;
+		 padding: rem(28.5) rem(15);
+		 text-transform: uppercase;
+		 margin-bottom: rem(20);
+	}
  	label{
- 		width: 100%;
+ 		// width: 100%;
  		display: block;
- 	}
+	 }
+	 &__polite{
+		 text-align: center;
+		 opacity: 0.53;
+		 font-size: 14px;
+		 font-weight: 500;
+		 margin-left: auto;
+		 margin-right: auto;
+		 max-width: rem(400);
+		 a{
+			 color: #0e0e0e !important; 
+			 @extend .tdu;
+			 
+		}
+
+	 }
 }
 
 
