@@ -492,3 +492,15 @@ iframe {
 		background-color: $primary;
 	}
 }
+
+.innerPage {
+	.scrollmagic-pin-spacer {
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+	}
+
+	.header {
+		position: relative !important;
+	}
+}
+

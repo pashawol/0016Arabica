@@ -64,10 +64,10 @@
 	}
 
 	&__img-wrap {
+		display: block;
 		@include media-breakpoint-down(sm) {
 			max-width: 217px;
 			margin: 0 auto;
-			display: block;
 		}
 	}
 
@@ -75,7 +75,7 @@
 		position: relative;
 		
 		@include media-breakpoint-up(lg) {
-			margin-right: calc(-50vw - -76%);
+			margin-right: calc(-50vw - -98%);
 		}
 	}
 

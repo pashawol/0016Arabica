@@ -1,0 +1,64 @@
+mixin sBasket(data)
+	// start sBasket
+	+b.SECTION.sBasket.section#sBasket&attributes(attributes)
+		.container
+			+e.row.row
+				.col-md-4
+					+e.item
+						+e.IMG.icon(src="img/@2x/basket-icon-1.png", alt="")
+						+e.text #[strong Если вас не&nbsp;устроило качество] нашего кофе&nbsp;&mdash; #[strong вернем деньги или&nbsp;заменим партию]
+				.col-md-4
+					+e.item
+						+e.IMG.icon(src="img/@2x/basket-icon-2.png", alt="")
+						+e.text Хранить капсулы можно #[strong до&nbsp;18&nbsp;месяцев без потери вкуса]
+				.col-md-4
+					+e.item
+						+e.IMG.icon(src="img/@2x/basket-icon-3.png", alt="")
+						+e.text Формируем заказ в&nbsp;течение 2х&nbsp;дней после оплаты и&nbsp;отправляем #[strong в&nbsp;любую точку России]
+			+b.section-title
+				h2 Корзина
+			table.table
+				thead
+					tr
+						td
+						td Товар
+						td Цена за ед.
+						td Кол-во
+						td Итого
+						td Удалить
+				tbody
+					mixin tr(i,t)
+						tr
+							td
+								+e.imgWrap(href="#")
+									+pic(`prod-${i}`,'','')
+							td
+								+e.name(href="#")= t
+							td
+								+e.price
+									span.d-md-none Цена за ед.
+									|250 руб.
+							td
+								+b.block-add
+									+e.BUTTON.minus(type='submit')
+									input(type="number" value='4' )
+									+e.BUTTON.plus(type='submit')
+							td
+								+e.price
+									span.d-md-none Итого:
+									|1 000 руб.
+							td
+								+e.BUTTON.cansel(type='submit')
+
+					+tr(1,'Colombia Specialty')
+					+tr(2,'Guatemala Specialty')
+			+e.smBlock
+				+e.rowSm.row
+					.col-sm-4
+						+e.price Промокод:
+					.col-sm-8
+						+input()
+					.col-sm-4
+					.col-sm-8
+						+e.btn(type="submit") применить промокод
+	// end sBasket
