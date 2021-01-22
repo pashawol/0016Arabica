@@ -7,23 +7,26 @@ mixin sAsk(data)
 				+e.subtitle Свяжитесь с&nbsp;нами в&nbsp;любом из&nbsp;каналов
 				
 			.row.justify-content-center
-				mixin item(i,t)
+				mixin item(i,t, m)
 					.col-sm
 						+e.btn(href="#")&attributes(attributes)
 							+e.wrap
 								+e.iconWrap
 									+icon(i)
 								+e.text= t
-							+e.call Написать в мессенджере
+							if m
+								+e.call Заказать звонок
+							else
+								+e.call Написать в мессенджере
 
 
 				+item('whatsapp','WhatsApp').active
 				+item('telegram','Telegram')
-				+item('call','Обратный звонок')
+				+item('call','Обратный звонок','m')
 
 
 
 			.text-center
 				+e.online мы онлайн
-				+e.tel(href=`tel${tels}`)= tel
+				+e.tel(href=`tel:${tels}`)= tel
 	// end sAsk

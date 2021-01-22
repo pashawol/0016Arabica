@@ -450,16 +450,19 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 1,
-		spaceBetween: 30,
+		spaceBetween: 46,
 		navigation: {
 			nextEl: '.sSert2 .swiper-button-next',
 			prevEl: '.sSert2 .swiper-button-prev',
 		},
 		breakpoints: {
-		
-			480: {
-				slidesPerView: 2
+			992: {
+				slidesPerView: 'auto'
 			},
+
+			576: {
+				slidesPerView: 2,
+			}
 		
 		}
 	});

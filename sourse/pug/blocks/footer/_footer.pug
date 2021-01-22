@@ -17,7 +17,7 @@ mixin footer()
 							+e.text Производим капсульный кофе стандарта Nespresso
 				.col-sm-auto.order-sm-3
 					+e.contactWrap
-						+e.tel(href=`tel${tels}`)= tel
+						+e.tel(href=`tel:${tels}`)= tel
 						+e.btn(href="#") Перезвоните мне
 				+e.col.col-sm-auto.order-sm-2
 					+e.write Пишите по всем вопросам, #[span.dot] мы онлайн

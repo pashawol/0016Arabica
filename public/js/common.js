@@ -433,13 +433,16 @@ function eventHandler() {
 	}));
 	var sert = new Swiper('.sSert2__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
-		spaceBetween: 30,
+		spaceBetween: 46,
 		navigation: {
 			nextEl: '.sSert2 .swiper-button-next',
 			prevEl: '.sSert2 .swiper-button-prev'
 		},
 		breakpoints: {
-			480: {
+			992: {
+				slidesPerView: 'auto'
+			},
+			576: {
 				slidesPerView: 2
 			}
 		}
