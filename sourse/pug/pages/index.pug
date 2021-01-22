@@ -17,6 +17,8 @@ include ../blocks/sSert2/_sSert2.pug
 include ../blocks/sAsk/_sAsk.pug
 include ../blocks/sGal/_sGal.pug
 include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/s-form/_s-form.pug
+include ../blocks/sCompBrand/_sCompBrand.pug
 
 block variables
 	- let  mainPage= null
@@ -40,7 +42,8 @@ block pagecontent
 	+sGuarantee
 	+sMaterials
 	+sCatalog
-	+sForm()
+	+s-form
+	+sCompBrand
 	+sSert2
 	+sDelivery
 	+sAsk

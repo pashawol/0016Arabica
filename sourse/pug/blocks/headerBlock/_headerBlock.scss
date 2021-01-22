@@ -3,16 +3,16 @@
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	@include media-breakpoint-up(lg) {
-
-		position: absolute;
-		// position: relative;
-		z-index: 200;
-		left: 0;
-		top: 0;
-		width: 100%;
-		perspective: 100vw;
-		transform-style: preserve-3d;
 	}
+	
+			position: absolute;
+			// position: relative;
+			z-index: 200;
+			left: 0;
+			top: 0;
+			width: 100%;
+			perspective: 100vw;
+			transform-style: preserve-3d;
 	&:hover{
 
 		.headerBlock{
@@ -34,22 +34,18 @@
 	--col: 1;
 
 	color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	@include media-breakpoint-up(lg) {
 
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
 	}
-	@include media-breakpoint-down(lg) {
-		position: relative;
-		transform: none !important	;
-		opacity: 1 !important;
-		clip-path: none !important;
-	}
+ 
 	
 
 	@include media-breakpoint-up(lg){
+	}
 	overflow: hidden;
 	&:nth-child(1){
 		&:not(.start){
@@ -65,7 +61,6 @@
 			calc((var(--col) - 1) / var(--cols) * 100%) 100%);
 		}
 		transform-origin: calc(((var(--col) - 1)+ var(--col))* 100%  / var(--cols)/ 2) 0;
-	}
 	&:nth-child(1) { 
 
 		position: relative !important;
@@ -78,9 +73,7 @@
 		&:nth-child(#{$i}) { 
 			--col: #{$i}; 
 			position: absolute;
-			@include media-breakpoint-down(lg){
-				display: none;
-			}
+		 
 			
 	}  
 }
@@ -285,18 +278,7 @@
 			@include roww(67px);
 		}
 	}
- 
-	.santo{
-		text-align: center;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		z-index: -1;
-		img{
-			max-width: 90%;
-		}
-	}
+
 
 	@include media-breakpoint-up(xl) {}
 

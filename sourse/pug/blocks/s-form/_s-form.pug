@@ -1,0 +1,71 @@
+mixin s-form()
+	// start s-form
+	+b.s-form.section#s-form.bg-wrap&attributes(attributes)
+		+pic("form-bg.jpg",'bg')(class="picture-bg")
+		.container
+			+pic('form-img.png','',0).man.d-none.d-lg-block
+			+form-wrap() 
+				+e.group-title 
+					.strong Выберите сорт кофе
+					| и&nbsp;введите количество
+				+e.group.row.g-1
+					mixin pro(i,t)
+						label.col-4
+							+b.prod-input
+								+e.head
+									img(src=`img/@1x/prod-${i}.png`, alt="").d-none.d-sm-block
+									+e.title= t
+								+e.body
+									+input('Например, 10').form-control-sm
+					+pro(`1`,`Colombia Specialty`)
+					+pro(`2`,`Guatemala Specialty`)
+					+pro(`3`,`Nicaragua Specialty`)
+				.tabs.tabs--js
+					.fw-500.mb-3 Куда отправить счет на оплату?
+					+e.group.row.g-1.tabs__caption
+						.tabs__btn.active
+							span
+								.green-circle
+								+icon('whatsapp')
+							| WhatsApp
+						.tabs__btn
+							span 
+								+icon("viber")
+							| Viber
+						.tabs__btn
+							span 
+								+icon('telegram')
+							| Telegram
+						.tabs__btn
+							span 
+								+icon('mail')
+							| E-mail
+					.tabs__wrap
+						.tabs__content.active
+							+e.input-with-icon
+								+input('+7 (999) 444-44-44','tel','Введите WhatsApp')
+									+icon("whatsapp")
+							.text-center.text-secondary.mb-3 Перезвоним, чтобы обсудить условия поставки
+						
+						.tabs__content
+							+e.input-with-icon
+								+input('+7 (999) 444-44-44','tel','Введите Viber')
+									+icon("viber")
+							.text-center.text-secondary.mb-3 Перезвоним, чтобы обсудить условия поставки
+						.tabs__content
+							+e.input-with-icon
+								+input('+7 (999) 444-44-44','text','Введите Telegram')
+									+icon("viber")
+							.text-center.text-secondary.mb-3 Перезвоним, чтобы обсудить условия поставки
+						.tabs__content
+							+e.input-with-icon
+								+input('email','email','Введите Ваш Email')
+									+icon("mail")
+							+e.input-with-icon
+								+input('+7 (999) 444-44-44','text','Введите номер телефона')
+									+icon("tel")
+							.text-center.text-secondary.mb-3 Перезвоним, чтобы обсудить условия поставки
+				//- +inputName()
+				+e.btn(type="submit") получить счет 
+				+polite()
+	// end s-form
