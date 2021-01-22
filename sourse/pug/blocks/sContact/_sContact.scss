@@ -1,9 +1,9 @@
 // start .sContact
 .sContact {
-	--sPT: #{rem(20)};
 	--sPB: #{rem(72)};
 	@include media-breakpoint-up(md) {
 		--sPB: #{rem(112)};
+		--sPT: #{rem(62)};
 	}
 	background-color: #151515;
 

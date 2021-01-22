@@ -2,8 +2,31 @@ mixin sAsk(data)
 	// start sAsk
 	+b.SECTION.sAsk.section#sAsk&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAsk
+			+b.section-title
+				h2 Ответим на любые ваши&nbsp;вопросы
+				+e.subtitle Свяжитесь с&nbsp;нами в&nbsp;любом из&nbsp;каналов
 				
-			.row
+			.row.justify-content-center
+				mixin item(i,t, m)
+					.col-sm
+						+e.btn(href="#")&attributes(attributes)
+							+e.wrap
+								+e.iconWrap
+									+icon(i)
+								+e.text= t
+							if m
+								+e.call Заказать звонок
+							else
+								+e.call Написать в мессенджере
+
+
+				+item('whatsapp','WhatsApp').active
+				+item('telegram','Telegram')
+				+item('call','Обратный звонок','m')
+
+
+
+			.text-center
+				+e.online мы онлайн
+				+e.tel(href=`tel:${tels}`)= tel
 	// end sAsk

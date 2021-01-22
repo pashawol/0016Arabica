@@ -7,14 +7,16 @@ mixin sGal(data)
 				div
 					h2 Компания «Санто Арабика»<br>находится в г. Магнитогорск 
 					+e.subtitle Благодаря мощностям производства выполняем заказы любых объемов
-				.swiper-button-hand.swiper-button-hand-next.swiper-button-next.d-none.d-md-block.sGal__sliderBtn
+				.swiper-button-hand.swiper-button-hand-next.swiper-button-next.d-none.d-lg-grid.sGal__sliderBtn
 					+icon('chevron-right')
 		+e.slider-wrap
 			+e.slider--js.swiper-container
 				.swiper-wrapper
 					mixin slide(x)
 						+e.slide.swiper-slide
-							img.swiper-lazy(src="#" data-src=`img/@2x/gal-${x}.jpg`, alt="")
+							+e.imgWrap
+								img(src=`img/@2x/gal-${x}.jpg`, alt="")
+								//- img.swiper-lazy(src="#" data-src=`img/@2x/gal-${x}.jpg`, alt="")
 					+slide(1)
 					+slide(2)
 					+slide(3)

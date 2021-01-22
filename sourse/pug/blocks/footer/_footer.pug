@@ -8,14 +8,18 @@ mixin footer()
 	+b.FOOTER.footer
 		+pic('footer-bg','bg')(class="picture-bg")
 		.container
-			.row
-				.col.d-none.d-md-block
+			+e.row.row
+				.col-auto.col-lg.d-none.d-md-block.order-1
 					+b.logo-block
 						img(src="img/@2x/logo.png", alt="")
 						div
 							+e.title «Санто Арабика»
 							+e.text Производим капсульный кофе стандарта Nespresso
-				+e.col.col-auto
+				.col-sm-auto.order-sm-3
+					+e.contactWrap
+						+e.tel(href=`tel:${tels}`)= tel
+						+e.btn(href="#") Перезвоните мне
+				+e.col.col-sm-auto.order-sm-2
 					+e.write Пишите по всем вопросам, #[span.dot] мы онлайн
 					+b.mass-block
 						+e.item(href="#")
@@ -26,10 +30,6 @@ mixin footer()
 							+e.iconWrap
 								+icon("tel")
 							+e.text WhatsApp
-				.col-auto
-					+e.contactWrap
-						+e.tel(href=`tel${tels}`)= tel
-						+e.btn(href="#") Перезвоните мне
 		+e.foot
 			.container
 				.row.justify-content-between

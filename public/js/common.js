@@ -368,6 +368,9 @@ function eventHandler() {
 			992: {
 				spaceBetween: 50
 			}
+		},
+		lazy: {
+			loadPrevNextAmount: 5
 		}
 	}));
 	var swiper5 = new Swiper('.sSert__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
@@ -396,6 +399,42 @@ function eventHandler() {
 			},
 			992: {
 				slidesPerView: 3
+			}
+		}
+	}));
+	var delivery = new Swiper('.sDelivery__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.sDelivery .swiper-button-next',
+			prevEl: '.sDelivery .swiper-button-prev'
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 20
+			},
+			992: {
+				spaceBetween: 30
+			}
+		},
+		lazy: {
+			loadPrevNextAmount: 5
+		}
+	}));
+	var sert = new Swiper('.sSert2__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		spaceBetween: 46,
+		navigation: {
+			nextEl: '.sSert2 .swiper-button-next',
+			prevEl: '.sSert2 .swiper-button-prev'
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 'auto'
+			},
+			576: {
+				slidesPerView: 2
 			}
 		}
 	}));

@@ -1,0 +1,170 @@
+// start .sDelivery
+.sDelivery {
+	--sPB: #{rem(23)};
+	--swiperArrowSize: #{rem(74)};
+	
+	padding-top: calc(var(--sPT) * 1.3);
+	
+	.section-title {
+		max-width: rem(420);
+		@include media-breakpoint-up(md) {
+			max-width: rem(730);
+		}
+
+		h2 {
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: calc(65/50);
+			letter-spacing: rem(0.4);
+			margin-bottom: .6rem;
+		}
+
+		&__subtitle {
+			font-size: 13px;
+			@include media-breakpoint-up(md) {
+				font-size: $h5-font-size;
+				letter-spacing: rem(-0.1);
+			}
+			font-weight: 500;
+		}
+	}
+
+	&__titleWrap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__btnWrap {
+		padding-top: 5px;
+		position: relative;
+		@include roww(16px);
+	}
+
+	&__btn {
+		position: relative;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		top: auto;
+	}
+
+	&__text {
+		position: relative;
+		z-index: 5;
+		font-weight: 700;
+		@extend .h5;
+		padding-left: 17px;
+		@include media-breakpoint-up(md) {
+			padding-left: rem(41);
+		}
+
+		&:hover, &:focus, &:active {
+			.sDelivery__subtext {
+				transform: scale(1);
+			}
+		}
+	}
+
+	&__prompt {
+		background-color: #000;
+		color: #fff;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: $small;
+		border-radius: 50%;
+		width: rem(16);
+		height: rem(16);
+	}
+
+	&__subtext {
+		font-size: $small;
+		@include a-cent(x);
+		@include mt;
+		bottom: 0;
+		background-color: rgba($color: #000000, $alpha: 0.9);
+		padding: rem(10) rem(10) 0;
+		border-radius: $border-radius;
+		max-width: 80%;
+		color: #fff;
+		font-weight: 400;
+		transform: scale(0);
+
+		p {
+			margin-bottom: .5rem;
+		}
+	}
+
+	&__numb {
+		position: absolute;
+		bottom: 0;
+		left: 8%;
+		z-index: 2;
+		color: rgba($color: #f1f1f1, $alpha: 0.64);
+		font-size: rem(137);
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	&__slide {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: calc(100px + 38.1vw);
+		max-width: rem(471px);
+		padding-bottom: rem(25);
+		user-select: none;
+
+		&:hover .sDelivery__imgWrap {
+			filter: none
+		}
+	}
+
+	&__imgWrap {
+		@include block(470,332);
+		@include mt(1);
+		filter: grayscale(100%);
+		margin-bottom: rem(30);
+
+		img {
+			width: 100%;
+			height: 100%;
+			@include a-cent;
+			object-fit: cover;
+		}
+	}
+
+	&__slider {
+		overflow: visible;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	@include media-breakpoint-up(xl) {
+		.container {
+			max-width: 1200px;
+		}
+	}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDelivery
