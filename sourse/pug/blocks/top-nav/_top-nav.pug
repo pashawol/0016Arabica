@@ -13,8 +13,13 @@ mixin mob-mnu()
 			span
 		+e.inner
 		
-			+mnu()
-			.text-right
+			+e.tel(href=`tel${tels}`)= tel
+			br
+			+e.link(href="#") Перезвоните мне
+			+e.text Пишите по всем вопросам,
+				br
+				span мы онлайн
+			+mass-block()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

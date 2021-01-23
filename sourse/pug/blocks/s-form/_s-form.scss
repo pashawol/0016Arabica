@@ -1,27 +1,94 @@
+.modal-win,
+.s-form {
+		 
+	.form-wrap{
+		position: relative;
+		z-index: 2;
+	
+		&__group-title{
+			@extend .h4;
+			margin-bottom: rem(25);
+			&--sm{
+				font-size: $h6-font-size !important;
+				// @extend .h6;
+				font-weight: 600;
+			}
+			span{
+				border-radius: $border-radius;
+				color: #ffffff;
+				background-color: rgba($color: $body-color, $alpha: .54);
+				display: inline-block;
+				padding: rem(3) rem(5);
+			}
+		}
+
+
+		&__group{
+			margin-bottom: rem(35);
+		}
+	}
+	.tabs{
+		&__caption{
+			margin-left: -1.5px;
+			margin-right: -1.5px;
+			display: flex;
+		}	
+		&__btn{
+			margin-left: 1.5px;
+			margin-right: 1.5px;
+			@media (min-width: 440px){
+				width: calc(25% - 3px);
+			}
+			width: calc(50% - 3px);
+			margin-bottom: 3px;
+			font-size: 14px;
+			border-radius: $border-radius;
+			@extend .btn;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			height:47px;
+			justify-content: center;
+			border: 1px solid #d0d0d0;
+			span{
+				position: relative;
+			}
+			.green-circle{
+				width: 11px;
+				height: 11px;
+				background-color: #2acc2a;
+				border-radius: 50%;
+				position: absolute;
+				left: -2px;
+				top: -2px;
+				z-index: 2;
+			}
+			&.active,
+			&:hover{
+				background-color: #000000;
+				color: #ffffff;
+				.icon{
+					color: #ffffff;
+					opacity: 0.58;
+				}
+			}
+			.icon{
+					font-size: rem(24);
+					margin-right: rem(6);
+					color: $body-color;
+					opacity: 0.58;
+			}
+		}
+	}
+}
 .s-form {
 	position: relative;
 	overflow: hidden;
 	--sPT: #{rem(100)};
- 
-	.container{
-		position: relative;
-		picture{
-			position: absolute;
-			left: rem(-108px);
-			top: rem(-46px);
-		}
-	}
-	 
 	.form-wrap{
-		position: relative;
-		z-index: 2;
 		margin-top: rem(12);
 		border-radius: 3px;
 		background-color: #ffffff; 
-		&__group-title{
-			@extend .h4;
-			margin-bottom: rem(25);
-		}
 		max-width: 612px;
 		@include media-breakpoint-up(lg) {
 
@@ -39,51 +106,16 @@
 			transform: translateX(-5px);
 		}
 	 
-
-		.tabs{
-			&__caption{
-				margin-left: -1.5px;
-				margin-right: -1.5px;
-				display: flex;
-			}	
-			&__btn{
-				margin-left: 1.5px;
-				margin-right: 1.5px;
-				@media (min-width: 440px){
-					width: calc(25% - 3px);
-				}
-				width: calc(50% - 3px);
-				margin-bottom: 3px;
-				font-size: 14px;
-				border-radius: $border-radius;
-				@extend .btn;
-				padding: 0;
-				display: flex;
-				align-items: center;
-				height:47px;
-				justify-content: center;
-				border: 1px solid #d0d0d0;
-				&.active,
-				&:hover{
-					background-color: #000000;
-					color: #ffffff;
-					.icon{
-						color: #ffffff;
-						opacity: 0.58;
-					}
-				}
-				.icon{
-						font-size: rem(24);
-						margin-right: rem(6);
-						color: $body-color;
-						opacity: 0.58;
-				}
-			}
-		}
-		&__group{
-				margin-bottom: rem(35);
+	}
+	.container{
+		position: relative;
+		picture{
+			position: absolute;
+			left: rem(-108px);
+			top: rem(-46px);
 		}
 	}
+
 
 	//
 	@include media-breakpoint-up(xl) {}
@@ -122,13 +154,16 @@
 }
 
 .prod-input{
+	display: flex;
+	flex-direction: column-reverse;
 		&__head{
-			border-radius: $border-radius $border-radius 0 0;
-			background-color: $body-color;
+			border-radius: $border-radius $border-radius 0 0; 
 			display: flex;
 			align-items: center;
-			color: #ffffff;
 			font-size: rem(14);
+			border: 1px solid #d0d0d0;
+			border-bottom: none;
+			@include mt;
 			@include media-breakpoint-up(sm) {
 			}
 			justify-content: center;
@@ -153,5 +188,12 @@
 			background-color: #e8e8e8;
 			height: auto;
 			padding: rem(12) rem(5);
+		}
+		&:hover &__head,
+		input:focus &__head{
+			
+				border-color:$body-color;
+				background-color: $body-color;
+				color: #ffffff;
 		}
 	}

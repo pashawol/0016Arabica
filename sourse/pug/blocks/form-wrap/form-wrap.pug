@@ -69,6 +69,52 @@ mixin add-file(n)
 			+e.SPAN.text   Прикрепить резюме
 		+e.SPAN.filename 
 
+mixin form-tabs(t)
+	.tabs.tabs--js&attributes(attributes)
+		.fw-500.mb-3= t
+		+e.group.row.g-1.tabs__caption
+			.tabs__btn.active
+				span
+					.green-circle
+					+icon('whatsapp')
+				| WhatsApp
+			.tabs__btn
+				span 
+					+icon("viber")
+				| Viber
+			.tabs__btn
+				span 
+					+icon('telegram')
+				| Telegram
+			.tabs__btn
+				span 
+					+icon('mail')
+				| E-mail
+		.tabs__wrap
+			.tabs__content.active
+				+e.input-with-icon
+					+input('+7 (999) 444-44-44','tel','Введите WhatsApp')
+						+icon("whatsapp")
+				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
+			
+			.tabs__content
+				+e.input-with-icon
+					+input('+7 (999) 444-44-44','tel','Введите Viber')
+						+icon("viber")
+				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
+			.tabs__content
+				+e.input-with-icon
+					+input('+7 (999) 444-44-44','text','Введите Telegram')
+						+icon("viber")
+				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
+			.tabs__content
+				+e.input-with-icon
+					+input('email','email','Введите Ваш Email')
+						+icon("mail")
+				+e.input-with-icon
+					+input('+7 (999) 444-44-44','tel','Введите номер телефона')
+						+icon("call")
+				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
 
 mixin polite()
 	+e.polite Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь  с&nbsp;#[a(href="#" ) Политикой конфиденциальности]

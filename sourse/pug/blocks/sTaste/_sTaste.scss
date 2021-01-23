@@ -4,6 +4,7 @@
 	.sTaste {
 		--sPT: #{rem(30)};
 		padding-bottom: 0;
+	
 		&__img-wrap{
 			@include media-breakpoint-down(md) {
 				position: relative;

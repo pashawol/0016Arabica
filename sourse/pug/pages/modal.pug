@@ -1,0 +1,66 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sUnique/_sUnique.pug
+include ../blocks/sSert/_sSert.pug
+include ../blocks/sBest/_sBest.pug
+include ../blocks/sTaste/_sTaste.pug
+include ../blocks/sTextLg/_sTextLg.pug
+include ../blocks/sGuarantee/_sGuarantee.pug
+include ../blocks/sMaterials/_sMaterials.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sSert2/_sSert2.pug
+include ../blocks/sAsk/_sAsk.pug
+include ../blocks/sGal/_sGal.pug
+include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/s-form/_s-form.pug
+include ../blocks/sCompBrand/_sCompBrand.pug
+
+block variables
+	- let  mainPage= 'bg-dark'
+block title
+	- let  title= 'Лендинг Опт'
+	title= title
+block pagecontent
+	
+	+mob-mnu()
+	+topLine()
+	.container
+		a.btn.btn-success.m-4.link-modal(href="#modal-text1")  modal-text1
+		a.btn.btn-success.m-4.link-modal(href="#modal-text2")  modal-text2
+		a.btn.btn-success.m-4.link-modal(href="#modal-text3")  modal-text3
+		a.btn.btn-success.m-4.link-modal(href="#modal-packaging")  modal-packaging
+		a.btn.btn-success.m-4.link-modal(href="#modal-shipping")  modal-shipping
+		a.btn.btn-success.m-4.link-modal(href="#modal-test")  modal-test
+		a.btn.btn-success.m-4.link-modal(href="#modal-become")  #modal-become
+		a.btn.btn-success.m-4.link-modal(href="#modal-call")  #modal-call
+		a.btn.btn-success.m-4.link-modal(href="#modal-prod")  #modal-prod
+	//- +header()
+	//- header.header
+	//- 	+headerBlock().slide-1
+	//- 	+sBanner.slide-2
+	//- +sAbout
+	//- +sUnique
+	//- +sSert
+	//- +sBest
+	//- +sTaste
+	//- +sTextLg
+	//- +sGuarantee
+	//- +sMaterials
+	//- +sCatalog
+	//- +s-form
+	//- +sCompBrand
+	//- +sSert2
+	//- +sDelivery
+	//- +sAsk
+	//- +sGal
+	//- +sContact()
+
+	+footer()
+
+
+	

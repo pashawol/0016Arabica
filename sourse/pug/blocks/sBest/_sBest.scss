@@ -3,6 +3,12 @@
 	.sBest {
 			padding-top: 0;
 			padding-bottom: rem(40);
+			&__text {
+				a{
+					color: currentColor;
+					@extend .tdsh;
+				}
+			}
 		&__col{ 
 			@include media-breakpoint-up(lg){ 
 				margin-left:  0 !important;

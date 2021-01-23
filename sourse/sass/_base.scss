@@ -11,7 +11,7 @@
 	background-position: center 0;
 	// background-position: center -2180px;
 	opacity: 0;
-	// display: none;
+	display: none;
 	// opacity: 0.7;
 } 
 
@@ -26,7 +26,12 @@ html{
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
 }
-
+h2{
+	a{
+		@extend .tdsh;
+		color: currentColor !important;
+	}
+}
 body {
 	// min-width: 320px; 
 	-webkit-font-smoothing: antialiased;
@@ -147,6 +152,12 @@ body {
 
 	&:hover {
 		text-decoration: none;
+	}
+}
+.tdsh{
+	border-bottom: 1px dashed;
+	&:hover{
+		border-color: transparent;
 	}
 }
 

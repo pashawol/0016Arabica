@@ -32,23 +32,9 @@ mixin sAbout(data)
 
 						p: span Мы&nbsp;переговорили практически со&nbsp;всеми известными производителями и&nbsp;обжарщиками кофе, а&nbsp;некоторых посетили лично. Наладили поставки зерна, запустили свою линию по&nbsp;производству капсул.
 						p: strong Благодаря нашим ноу-хау в&nbsp;процессе производства мы&nbsp;снизили себестоимость капсул и&nbsp;теперь представляем вам достойного конкурента оригинальным капсулам по&nbsp;доступной цене.
-						+e.contact-block
-							+e.contact-block-text Давайте обсудим #[strong ваш первый заказ]&nbsp;&mdash; свяжитесь с&nbsp;нами удобным вам способом и&nbsp;мы&nbsp;рассчитаем стоимость партии нужного объема на&nbsp;специальных условиях
-							+e.btns
-								+e.btn.active(href="#")
-									span
-										+e.DIV.label
-										+icon('whatsapp')
-									| WhatsApp
-									
-								+e.btn(href="#")
-									+icon('viber')
-									| Viber
-								+e.btn(href="#")
-									+icon('telegram')
-									| Telegram
-								+e.btn(href="#")
-									+icon('call')
-									| Звонок
-
+						+contact-block()
 	// end sAbout
+	+b.sticky-block--js
+		+e.close
+			+icon("close")
+		+e.link.link-modal(href="#modal-become") Стань нашим дилером в&nbsp;своем городе или в&nbsp;своей стране и&nbsp;зарабатывай вместе с&nbsp;нами.

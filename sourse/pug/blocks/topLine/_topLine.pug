@@ -10,17 +10,13 @@ mixin topLine()
 							+e.title «Санто Арабика»
 							+e.text Производим капсульный кофе стандарта Nespresso
 				.col-auto.d-md-none
-					.mass-block__item
+					.mass-block__item.toggle-menu-mobile--js
 						+icon("tel")
 				.col-auto.text-end.d-none.d-md-block
 					.row
 						.col-auto
-							+b.mass-block
-								+e.item(href="#")
-									+icon("telegram")
-								+e.item(href="#")
-									+icon("tel")
+							+mass-block()
 						.col-auto
 							+e.tel(href=`tel${tels}`)= tel
-					a.btn.btn-dark(href="#") Перезвоните мне
+					a.btn.btn-dark.link-modal(href="#modal-call") Перезвоните мне
 	// end topLine
