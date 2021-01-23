@@ -77,6 +77,14 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+	&-inner {
+		background-color: #121212;
+		background-image: url(../img/@2x/head-bg-sm.jpg);
+		@include media-breakpoint-up(xxl) {
+			--sPB: #{rem(54)};
+		}
+	}
+
 } // end.topLine
 
 .mass-block{

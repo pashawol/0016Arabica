@@ -6,6 +6,7 @@
 	position: relative;
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
+	margin-top: auto;
 	color: #fefefe;
 
 	.picture-bg {
@@ -123,10 +124,11 @@
 	
 	&__foot {
 		padding-top: rem(23);
+		margin-top: rem(20);
 		@include media-breakpoint-up(sm) {
+			margin-top: rem(64);
 			border-top: solid 1px rgba($color: #fff, $alpha: 0.09);
 		}
-		margin-top: rem(64);
 	}
 
 	&__polite {

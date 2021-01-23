@@ -81,7 +81,9 @@
 			.icon {
 				color: #fff;
 			}
+		}
 
+		&.active {
 			.sAsk__iconWrap::before {
 				transform: scale(1);
 				opacity: 1;

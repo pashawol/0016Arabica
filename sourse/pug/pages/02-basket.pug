@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCheckout/_sCheckout.pug
+include ../blocks/sBasket/_sBasket.pug
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	//- +header()
+	header.header
+		+topLine().topLine-inner
+	+form-wrap
+		+sBasket
+		+sCheckout
+	+footer()
+
+
+	

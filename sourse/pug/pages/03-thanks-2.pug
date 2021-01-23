@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCheckout/_sCheckout.pug
+include ../blocks/sThanks/_sThanks.pug
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	//- +header()
+	header.header
+		+topLine().topLine-inner
+	+sThanks({
+		title: ' Иван, спасибо, мы приняли вашу заявку!',
+		text: `Специалист &laquo;Санто Арабика&raquo; перезвонит вам в&nbsp;указанное время и&nbsp;ответит на&nbsp;ваши вопросы. Хорошего дня!`
+	})
+	+footer()
+
+
+	

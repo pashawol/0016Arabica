@@ -1,5 +1,6 @@
 .pixel-perfect {
 	top: 444px;
+	top: 0;
 	// bottom: 0;
 	display: block;
 	@include a-cent(x);
@@ -9,7 +10,7 @@
 	width: 100%;
 	height: 200%;
 	background-position: center 0;
-	// background-position: center -2180px;
+	// background-position: center -25px;
 	opacity: 0;
 	display: none;
 	// opacity: 0.7;
@@ -501,6 +502,22 @@ iframe {
 		color: $body-color;
 		border-color:$primary;
 		background-color: $primary;
+	}
+}
+
+.innerPage {
+	.main-wrapper {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	.scrollmagic-pin-spacer {
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+	}
+
+	.header {
+		position: relative !important;
 	}
 }
 
