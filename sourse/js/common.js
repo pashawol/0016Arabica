@@ -215,19 +215,19 @@ function eventHandler() {
 			$(".sticky-block__close").click(function(){
 				$(".sticky-block--js").addClass('d-none');
 			})
-	function whenResize() { 
-		var $win = $(window);
-		var $marker = $('.sAbout');
-		//отслеживаем событие прокрутки страницы
-		$win.scroll(function() { 
-			if($win.scrollTop() + $win.height() >= $marker.offset().top) {
-				// $('#message').html('виден'); //выполняем действия если элемент виден
-				$(".sticky-block--js").addClass('active');
-			}else{
-				$(".sticky-block--js").removeClass('active'); 
+			function whenResize() { 
+				var $win = $(window);
+				var $marker = $('.sAbout');
+				//отслеживаем событие прокрутки страницы
+				$win.scroll(function() { 
+					if($win.scrollTop() + $win.height() >= $marker.offset().top) {
+						// $('#message').html('виден'); //выполняем действия если элемент виден
+						$(".sticky-block--js").addClass('active');
+					}else{
+						$(".sticky-block--js").removeClass('active'); 
+					}
+				});
 			}
-		});
-	}
 
 	window.addEventListener('resize', () => {
 		whenResize();
