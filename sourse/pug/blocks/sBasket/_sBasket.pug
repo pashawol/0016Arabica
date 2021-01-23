@@ -16,7 +16,7 @@ mixin sBasket(data)
 						+e.IMG.icon(src="img/@2x/basket-icon-3.png", alt="")
 						+e.text Формируем заказ в&nbsp;течение 2х&nbsp;дней после оплаты и&nbsp;отправляем #[strong в&nbsp;любую точку России]
 			+b.section-title
-				h2 Корзина
+				h5 Корзина
 			table.table
 				thead
 					tr
@@ -54,11 +54,13 @@ mixin sBasket(data)
 					+tr(2,'Guatemala Specialty')
 			+e.smBlock
 				+e.rowSm.row
-					.col-sm-4
-						+e.price Промокод:
-					.col-sm-8
+					.col-sm-3
+						+e.promo Промокод:
+					.col-sm-9
 						+input()
-					.col-sm-4
-					.col-sm-8
+					.col-sm-3
+					.col-sm-9
 						+e.btn(type="submit") применить промокод
+				+e.total Итого без доставки:
+					strong 2 000 руб.
 	// end sBasket

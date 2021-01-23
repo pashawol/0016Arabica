@@ -1,0 +1,29 @@
+mixin sThanks(data)
+	// start sThanks
+	+b.SECTION.sThanks.section#sThanks&attributes(attributes)
+		.container
+			+e.iconWrap
+				+pic('check','','')
+			+b.section-title.text-center
+				h5= data.title
+			+e.text!= data.text
+	// end sThanks
+
+mixin sThanks-2(data)
+	// start sThanks
+	+b.SECTION.sThanks2.section#sThanks&attributes(attributes)
+		.container
+			.row.align-items-center
+				+e.col.col-md
+					+b.section-title
+						+e.iconWrap
+							+pic('check','','')
+						h5!= data.title
+					+e.text!= data.text
+						| Хорошего дня!
+				.col-md.order-md-first
+					+e.wrap
+						+pic('thanks-img.png','','')
+						+e.position
+							strong Евгений Клепиков
+							| Соучредитель<br> ООО «Санто Арабика»

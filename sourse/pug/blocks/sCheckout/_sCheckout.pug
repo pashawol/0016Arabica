@@ -1,0 +1,38 @@
+mixin sCheckout(data)
+	// start sCheckout
+	+b.SECTION.sCheckout.section#sCheckout&attributes(attributes)
+		.container
+			+b.section-title
+				h5 Оформление заказа
+				
+			+e.block
+				+e.row.row
+					.col-sm
+						+e.colTitle--mbSm Введите данные получателя
+						+input('Мария Иванова','text','Имя и фамилия')
+						+input('+7 (___) ___-___-__','tel','Номер телефона')
+						+input('hello@mail.ru','email','Email')
+						+e.data Ваши данные нужны только для оформления заказа. Мы&nbsp;не&nbsp;передаем их&nbsp;третьим лицам и&nbsp;не&nbsp;рассылаем спам.
+					.col-sm
+						+e.colTitle Выберите способ доставки
+						+e.radioWrap
+							+in-c('radio','Самовывоз','delivery')
+							+in-c('radio','Доставка','delivery')(checked)
+						+input('Укажите адрес доставки','text')
+						+e.text Работаем с #[strong СДЕК, BoxBerry, PickPoint, DPD, Деловыми Линиями, ПЭК]
+						+e.partners.row.align-items-center.justify-content-between
+							mixin item(i)
+								.col-4.col-sm-auto
+									+pic(`partner-${i}.jpg`,'','')
+							+item('1')
+							+item('2')
+							+item('3')
+							+item('4')
+							+item('5')
+							+item('6')
+						p В&nbsp;момент согласования заказа мы&nbsp;уточним, какой&nbsp;ТК вам удобнее получить товар.
+						p Если хотите доставку товара&nbsp;ТК, которой нет в&nbsp;списке, подумаем и&nbsp;решим, как это сделать.
+						+e.btn(type="submit") завершить оформление
+						+polite
+
+	// end sCheckout
