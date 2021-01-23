@@ -219,12 +219,15 @@ function eventHandler() {
 		var $win = $(window);
 		var $marker = $('.sAbout');
 		//отслеживаем событие прокрутки страницы
-		$win.scroll(function() { 
-			if($win.scrollTop() + $win.height() >= $marker.offset().top) {
-				// $('#message').html('виден'); //выполняем действия если элемент виден
-				$(".sticky-block--js").addClass('active');
-			}else{
-				$(".sticky-block--js").removeClass('active'); 
+		if ($marker){
+
+			$win.scroll(function() { 
+				if($win.scrollTop() + $win.height() >= $marker.offset().top) {
+					// $('#message').html('виден'); //выполняем действия если элемент виден
+					$(".sticky-block--js").addClass('active');
+				}else{
+					$(".sticky-block--js").removeClass('active'); 
+				}
 			}
 		});
 	}
