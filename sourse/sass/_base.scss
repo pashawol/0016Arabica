@@ -519,6 +519,14 @@ iframe {
 	.header {
 		position: relative !important;
 	}
+
+	.topLine {
+		.container {
+			@include media-breakpoint-up(xl) {
+				max-width: 1200px;
+			}
+		}
+	}
 }
 
 

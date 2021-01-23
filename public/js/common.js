@@ -403,6 +403,7 @@ function eventHandler() {
 	var sert = new Swiper('.sSert2__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
 		spaceBetween: 46,
+		// loopedSlides: 5,
 		navigation: {
 			nextEl: '.sSert2 .swiper-button-next',
 			prevEl: '.sSert2 .swiper-button-prev'
