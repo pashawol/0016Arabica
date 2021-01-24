@@ -39,10 +39,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@include media-breakpoint-down(md) {
+		text-align: center;
+	}
 
-	--sTPB: #{rem(17)};
 	--sPT: #{rem(40)};
 	--sPB: #{rem(57)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(12)};
+	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(20)};
 	}
@@ -51,13 +56,19 @@
 		position: relative;
 
 		&__iconWrap {
-			position: absolute;
-			top: rem(3);
-			left: -35px;
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				top: rem(3);
+				left: -35px;
+			}
+			@include media-breakpoint-down(md) {
+				margin-bottom: rem(20);
+			}
 		}
 
 		h5 {
 			font-weight: 700;
+			line-height: calc(33/25);
 		}
 	}
 
@@ -68,14 +79,21 @@
 	}
 
 	.row {
-		@include media-breakpoint-up(xl) {
-			// @include roww(82px);
+		@include media-breakpoint-only(lg) {
+			@include roww(50px);
+		}
+		@include media-breakpoint-only(md) {
+			@include roww(55px);
 		}
 	}
 
 	&__col {
 		@include media-breakpoint-up(xl) {
 			max-width: 45%;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding-bottom: rem(30);
 		}
 	}
 
@@ -84,7 +102,9 @@
 		line-height: calc(31/18);
 
 		p {
-			margin-bottom: rem(36);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(35);
+			}
 		}
 	}
 
@@ -92,9 +112,15 @@
 		position: relative;
 	}
 
-	&__position {
+	&__name {
 		position: absolute;
-		left: 40%;
+		@include media-breakpoint-down(xl) {
+			right: -10px;
+		}
+		@include media-breakpoint-down(sm) {
+			right: 10px;
+		}
+		right: 5.5%;
 		bottom: rem(40);
 		text-align: center;
 		border-radius: $border-radius;

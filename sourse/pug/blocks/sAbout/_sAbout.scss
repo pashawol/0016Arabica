@@ -4,6 +4,8 @@
 		color: #ffffff;
 		--sPT: #{rem(85)};
 		--sPB: 0;
+		position: relative;
+		z-index: 4;
 		--swiperArrowPosition: 4%;
 		@include media-breakpoint-down(xl){
 			--swiperArrowPosition: 0;
@@ -100,13 +102,14 @@
 				margin-left: auto;
 				margin-right: auto;
 				background-color: #2a2a2a;
-				background-image: url(../img/@2x/logo-gray.png);
+				background-image: url(../img/@2x/webp/logo-gray.webp);
 				@include bgs;
 				img{
 					max-width: 90%;
 				}
 			}
 		}
+		
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -128,7 +131,8 @@
 	margin-top: rem(80);
 	border-radius: rem(4);
 	max-width: 542px;
-	background-image: url(../img/@2x/gradient.jpg);
+	// background-image: url(../img/@2x/gradient.jpg);
+	background-image: linear-gradient(90deg, rgba(252,127,8,1) 0%, rgba(195,16,108,1) 49%, rgba(91,45,144,1) 100%);
 	@include bgs;
 	padding: rem(35) rem(33);
 	padding-right: rem(20);
@@ -187,6 +191,23 @@
 		 }
 		 flex-wrap: wrap;
 	}	
+	.soc{
+		&__item{
+			@extend .btn;
+			@extend .btn-outline-body;
+			width: rem(54px);
+			height: rem(54px);
+			border-radius: 50%;
+			text-align: center;
+			padding: 0;
+			display: flex;
+			align-items: center;opacity: 1;
+			justify-content: center; 
+			.icon{
+				font-size: rem(24);
+			}
+		}
+	}
 }
 
 .swiper-container{

@@ -18,7 +18,14 @@
 	}
 
 	&__block {
-		max-width: rem(952);
+		max-width: 340px;
+		@include media-breakpoint-up(sm) {
+			max-width: rem(952);
+		}
+		@include media-breakpoint-down(sm) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	&__row {

@@ -31,22 +31,25 @@ mixin mass-block()
 			+icon("telegram")
 		+e.item(href="#")
 			+icon("tel")
-mixin contact-block()
+mixin contact-block(soc)
 	+b.contact-block&attributes(attributes)
 		+e.text Давайте обсудим #[strong ваш первый заказ]&nbsp;&mdash; свяжитесь с&nbsp;нами удобным вам способом и&nbsp;мы&nbsp;рассчитаем стоимость партии нужного объема на&nbsp;специальных условиях
-		+e.btns
-			+e.btn.active(href="#")
-				span
-					+e.DIV.label
-					+icon('whatsapp')
-				| WhatsApp
-				
-			+e.btn(href="#")
-				+icon('viber')
-				| Viber
-			+e.btn(href="#")
-				+icon('telegram')
-				| Telegram
-			+e.btn(href="#")
-				+icon('call')
-				| Звонок
+		if !soc
+			+e.btns
+				+e.btn.active(href="#")
+					span
+						+e.DIV.label
+						+icon('whatsapp')
+					| WhatsApp
+					
+				+e.btn(href="#")
+					+icon('viber')
+					| Viber
+				+e.btn(href="#")
+					+icon('telegram')
+					| Telegram
+				+e.btn(href="#")
+					+icon('call')
+					| Звонок
+		else
+			+soc()

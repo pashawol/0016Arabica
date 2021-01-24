@@ -1,4 +1,4 @@
-mixin sCatalog(data)
+mixin sCatalog(b)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		+pic('santo.png').santo
@@ -9,7 +9,7 @@ mixin sCatalog(data)
 			+e.wrap
 				+e.slider--js.swiper-container
 					.swiper-wrapper
-						mixin slide( i,r,t,p)
+						mixin slide( i,r,t,p, b)
 							+e.slide.swiper-slide
 								+e.item
 									+e.img-wrap(href="#"  )
@@ -18,10 +18,29 @@ mixin sCatalog(data)
 										img.res-i.swiper-lazy(src="#" data-src=`img/@2x/prod-${i}.png`, alt="")
 									+e.title= t
 									p= p
-									+e.price 250 ₽
-						+slide(`1`,`25 ₽ за капсулу`,`Colombia Specialty`,`Ноты высоко-кислых цитрусовых фруктов: апельсина, мандарина. А также к уантро (апельсинового ликера)`)
-						+slide(`2`,`25 ₽ за капсулу`,`Guatemala Specialty`,`Ноты сочных фруктовых вкусов: абрикоса, сушеного инжира, груши и карамельной сладости`)
-						+slide(`3`,`25 ₽ за капсулу`,`Nicaragua Specialty`,`Ноты какао, грецкого ореха и шоколада`)
+									if b
+										+e.gr.row
+											+e.gr-title.col Количество упаковок:
+											.col-auto
+												+b.block-add
+													+e.BUTTON.minus(type='submit')
+													input(type="number" value='4' )
+													+e.BUTTON.plus(type='submit')
+										+e.gr.row
+											+e.gr-title.col Стоимость:
+
+
+											+e.price.col-auto.pb-0 250 ₽
+										+e.btn(type="button") 
+											span добавить в корзину
+											+e.icon-wrap
+												+icon("shopping-bag")
+										+e.foot-text.active Товар добавлен в корзину
+									else
+										+e.price 250 ₽
+						+slide(`1`,`25 ₽ за капсулу`,`Colombia Specialty`,`Ноты высоко-кислых цитрусовых фруктов: апельсина, мандарина. А также к уантро (апельсинового ликера)`,b)
+						+slide(`2`,`25 ₽ за капсулу`,`Guatemala Specialty`,`Ноты сочных фруктовых вкусов: абрикоса, сушеного инжира, груши и карамельной сладости`,b)
+						+slide(`3`,`25 ₽ за капсулу`,`Nicaragua Specialty`,`Ноты какао, грецкого ореха и шоколада`,b)
 						
 
 

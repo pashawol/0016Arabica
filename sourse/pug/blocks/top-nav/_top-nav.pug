@@ -26,10 +26,12 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col
+				.col.d-none.d-lg-block
 					+mnu()
-					
+				.col-lg-auto
+					+b.basket-btn(href="#")
+						+icon("cart")
+						| Корзина
+						+e.count 0
+					 
 	// end top-nav

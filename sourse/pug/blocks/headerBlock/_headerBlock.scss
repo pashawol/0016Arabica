@@ -1,4 +1,7 @@
 // start .headerBlock
+.pre-body{
+
+}
 .wrap{
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
@@ -26,7 +29,7 @@
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
 	background-color: #121212;
-	background-image: url(../img/@2x/head-bg.jpg);
+	
 	--sPT: 0;
 	--sPB: #{rem(126)}; 
 	$count: 20;
@@ -136,7 +139,10 @@
 		margin-bottom: 0.5em;
 	}
 	&__text{
-		max-width: rem(480);
+		max-width: rem(510);
+		&--01{
+			max-width: rem(550);
+		}
 		@include media-breakpoint-up(lg){
 			margin-bottom: 0;
 		}
@@ -177,6 +183,17 @@
 				
 				height: rem(218);
 			}
+			&--lg.col-12{
+				height: rem(392);
+				width: rem(458);
+			}
+		}
+	}
+	@include media-breakpoint-up(lg){
+
+		.row--lg{
+			margin-left: rem(45);
+			
 		}
 	}
 	&__card-text{
@@ -201,6 +218,16 @@
 			background-image: linear-gradient(to top, #e8291b 0%, #ff6c1f 100%);
 		}
 	}
+	&__card-text2{
+		position: relative; 
+		max-width: rem(360);
+		@include media-breakpoint-up(sm){
+
+			font-size: $h6-font-size;
+		}
+		font-size: 13px;
+	 
+	}
 	@include media-breakpoint-up(lg){
 
 		&__col-right{
@@ -224,6 +251,9 @@
 		}
 		margin-top: rem(24);
 		order: -1;
+		&--01{
+			order: 0;
+		}
 		@include media-breakpoint-up(md){
 			margin-left: 0;
 			margin-right: 0;
@@ -279,6 +309,69 @@
 		}
 	}
 
+	&__text-right{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+
+			margin-top: rem(150);
+		}
+	}
+
+	&__btn-grad{
+		width: rem(318);
+		height: rem(83);
+		display: flex;
+		justify-content: center;
+		text-transform: uppercase;
+		font-size: 16px;
+		margin-bottom: rem(25);
+		// @extend .btn;
+		position: relative;
+		z-index: 2;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		font-size: 16px; 
+	
+
+		&::before{
+		}
+ 
+	&::before{
+		content: '';
+		@include a-cent;
+		z-index: -1;
+		border-radius: $border-radius;
+		background-image: var(--grad);
+		--t1: calc(100% - 2px);
+		clip-path: polygon(0% 0%, 0% 100%, var(--t1) 100%, var(--t1) var(--t1), calc(100% - var(--t1)) var(--t1), calc(100% - var(--t1)) calc(100% - var(--t1)), var(--t1) calc(100% - var(--t1)), var(--t1) 100%, 100% 100%, 100% 0%);
+		@include mt;
+	}
+	span{
+		position: relative;
+		z-index: 2;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		--gradColor: var(--grad);
+			background-image: var(--gradColor);
+		}
+	
+		&--biz{
+			--grad: linear-gradient(to top, #e8291b 0%, #ff6c1f 100%);
+		}
+		&--base{
+			--grad: linear-gradient(90deg, rgba(252,127,8,1) 0%, rgba(195,16,108,1) 49%, rgba(91,45,144,1) 100%);
+		}
+		&:hover{ 
+			--gradColor: linear-gradient(to top, #000 0%, #000 100%) !important;
+			span{ 
+				-webkit-text-fill-color: #000000;
+			}
+			&::before{
+				--t1: 0;
+			}
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 

@@ -1,17 +1,21 @@
 
 	// start .sBanner
 	.sBanner {
-		min-height: 100vh;
-		min-height: calc(var(--vh, 1vh) * 100);
+		min-height: 150vh;
+		min-height: calc(var(--vh, 1vh) * 150);
 		background: rgb(234,43,29);
 		background: linear-gradient(0deg, rgba(234,43,29,1) 50%, rgba(254,108,32,1) 100%);
+		// background-image: linear-gradient(to top, #e8291b 0%, #ff6c1f 100%);
+		&--rozn{
+			background: linear-gradient(90deg, rgba(252,127,8,1) 0%, rgba(195,16,108,1) 49%, rgba(91,45,144,1) 100%);;
+		}
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		position: relative;
-		overflow: hidden;
+		// overflow: hidden;
 		picture{
 			position: absolute;
 			top: 70px;

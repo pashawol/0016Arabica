@@ -1,17 +1,14 @@
 .top-nav {
-	position: sticky; 
-	left: 0;
-	// left: 200px;
-	// right: -200px;
-	// margin-right: -200px;
-	top: 0;
-	left: 0;
-	z-index: 800;
-	background-color: #fff;
-	border-bottom: 1px solid #000; 
+	 padding-top: rem(20);
+	 padding-bottom: rem(20);
+	border-bottom: 1px solid rgba($color: #fff, $alpha: .13); 
+	z-index: 1100;
 	&.fixed { 
 		bottom: auto;
 		margin-top: 0;
+	}
+	.row{
+		align-items: center;
 	}
 
 	// 
@@ -52,3 +49,31 @@
 }
 
 
+.basket-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: 500;
+	padding: rem(10) 0;
+	.icon{
+		color: #e9e5bf;
+		font-size: rem(24);
+		margin-right: rem(21);
+	}
+	&__count{
+		width: 19px;
+		height: 19px;
+		background-color: #fffbd0;
+		border-radius: 50%;
+		text-align: center;
+		color: $body-color; 
+		font-size: 14px;
+		font-weight: 700;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		margin-left: 9px;
+	}
+}

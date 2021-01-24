@@ -1,4 +1,4 @@
-mixin sAbout(data)
+mixin sAbout(soc)
 	// start sAbout
 	+b.SECTION.sAbout.section.bg-wrap#sAbout&attributes(attributes)
 		+pic("dark-bg.jpg",'bg').picture-bg
@@ -32,7 +32,7 @@ mixin sAbout(data)
 
 						p: span Мы&nbsp;переговорили практически со&nbsp;всеми известными производителями и&nbsp;обжарщиками кофе, а&nbsp;некоторых посетили лично. Наладили поставки зерна, запустили свою линию по&nbsp;производству капсул.
 						p: strong Благодаря нашим ноу-хау в&nbsp;процессе производства мы&nbsp;снизили себестоимость капсул и&nbsp;теперь представляем вам достойного конкурента оригинальным капсулам по&nbsp;доступной цене.
-						+contact-block()
+						+contact-block(soc)
 	// end sAbout
 	+b.sticky-block--js
 		+e.close

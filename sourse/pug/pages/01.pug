@@ -1,0 +1,56 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sUnique/_sUnique.pug
+include ../blocks/sSert/_sSert.pug
+include ../blocks/sBest/_sBest.pug
+include ../blocks/sTaste/_sTaste.pug
+include ../blocks/sTextLg/_sTextLg.pug
+include ../blocks/sGuarantee/_sGuarantee.pug
+include ../blocks/sMaterials/_sMaterials.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sSert2/_sSert2.pug
+include ../blocks/sAsk/_sAsk.pug
+include ../blocks/sGal/_sGal.pug
+include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/s-form/_s-form.pug
+include ../blocks/sCompBrand/_sCompBrand.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Розница'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	//- +header()
+	header.header.header--js
+		+headerBlock01().slide-1
+			+top-nav()
+			+topLine()
+		+sBanner.slide-2
+	+sUnique
+	+sSert
+	+sBest
+	+sTaste
+	+sTextLg
+	+sGuarantee
+	+sMaterials
+	+sCatalog('bb')
+	//- +s-form
+	//- +sCompBrand
+	+sSert2
+	+sDelivery
+	+sAbout('soc')
+	+sAsk
+	+sGal
+	+sContact()
+	+footer()
+
+
+	

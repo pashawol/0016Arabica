@@ -226,16 +226,19 @@ function eventHandler() {
 
 	function whenResize() {
 		var $win = $(window);
-		var $marker = $('.sAbout'); //отслеживаем событие прокрутки страницы
+		var $marker = $('.sAbout');
 
-		$win.scroll(function () {
-			if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
-				// $('#message').html('виден'); //выполняем действия если элемент виден
-				$(".sticky-block--js").addClass('active');
-			} else {
-				$(".sticky-block--js").removeClass('active');
-			}
-		});
+		if ($marker[0]) {
+			//отслеживаем событие прокрутки страницы
+			$win.scroll(function () {
+				if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+					// $('#message').html('виден'); //выполняем действия если элемент виден
+					$(".sticky-block--js").addClass('active');
+				} else {
+					$(".sticky-block--js").removeClass('active');
+				}
+			});
+		}
 	}
 
 	window.addEventListener('resize', function () {
@@ -250,28 +253,26 @@ function eventHandler() {
 	var wipeAnimation = new TimelineMax().to(".headerBlock", .1, {
 		className: "+=start"
 	}) // .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
-	.to(".headerBlock", 1, {
+	.to(".headerBlock", .6, {
 		transform: "rotateY(90deg)"
-	}).to(".headerBlock", 1, {
+	}).to(".headerBlock", .6, {
 		opacity: 0,
 		delay: -.5
 	}).to(".sBanner__container", .9, {
 		y: "0%",
 		opacity: 1,
-		delay: -.8
+		delay: -.5
 	}).to(".sBanner__text", .9, {
 		y: "0%",
 		opacity: 1,
-		delay: -.8
-	}); // .to(".headerBlock", 1, {opacity: 0, transform: "rotateY(90deg)"})
-	// .fromTo("sBanner", .1, {}, {});
-	// create scene to pin and link animation
+		delay: -.5
+	}); // create scene to pin and link animation
 
 	new ScrollMagic.Scene({
-		triggerElement: ".header",
+		triggerElement: ".header--js",
 		triggerHook: "onLeave",
-		duration: "60%"
-	}).setPin(".header").setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
+		duration: "120%"
+	}).setPin(".header--js").setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 	var tween = new TimelineMax().add([TweenMax.fromTo(".cap-1", 1, {
 		y: 150
@@ -403,6 +404,7 @@ function eventHandler() {
 	var sert = new Swiper('.sSert2__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
 		spaceBetween: 46,
+		// loopedSlides: 5,
 		navigation: {
 			nextEl: '.sSert2 .swiper-button-next',
 			prevEl: '.sSert2 .swiper-button-prev'

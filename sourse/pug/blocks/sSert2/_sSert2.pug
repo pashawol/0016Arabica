@@ -6,12 +6,12 @@ mixin sSert2(data)
 
 				
 			.row.align-items-center
-				+e.textCol.col-lg
+				+e.textCol.col-lg.pt-2
 					+b.section-title
 						h4 Вся продукция имеет сертификаты качества государственного образца
 						h6 Если вас не&nbsp;устроило качество нашего кофе, просто сообщите нам об&nbsp;этом.<br> Мы&nbsp;вернем деньги или заменим партию
-					+e.btnWrap
-						+e.btn(href="#") Делаю первый заказ
+					//- +e.btnWrap
+					//- 	+e.btn(href="#") Делаю первый заказ
 				+e.sliderCol.col-lg
 					+e.wrap
 						+e.slider--js.swiper-container
@@ -24,6 +24,10 @@ mixin sSert2(data)
 									+e.img-wrap(href="img/@2x/sert-2.jpg" data-fancybox="ser-gal")
 										img.res-i(src="img/@2x/sert-2.jpg", alt="")
 										//- img.res-i.swiper-lazy(src="#" data-src="img/@2x/sert-2.jpg", alt="")
+								+e.slide.swiper-slide
+									+e.img-wrap(href="img/@2x/sert-1.jpg" data-fancybox="ser-gal")
+										img.res-i(src="img/@2x/sert-1.jpg", alt="")
+										//- img.res-i.swiper-lazy(src="#" data-src="img/@2x/sert-1.jpg", alt="")
 						+e.control
 							+arrow
 	// end sSert2

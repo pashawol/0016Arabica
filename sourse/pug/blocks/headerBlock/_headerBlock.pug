@@ -1,8 +1,9 @@
-mixin headerBlock()
+- let counter = 20
+mixin headerBlock(count= counter)
 	.wrap
-		- for (var x = 0; x < 20; x++)
+		- for (var x = 0; x < count; x++)
 			// start headerBlock
-			+b.headerBlock.section#headerBlock&attributes(attributes)
+			+b.headerBlock(style="background-image: url(../img/@2x/head-bg.jpg);").section&attributes(attributes)
 				block
 				+pic('santo.png').santo
 				.container
@@ -35,4 +36,65 @@ mixin headerBlock()
 								+e.link-wrap
 									+e.link.scroll-link(href="#sAbout") Сначала расскажите, что не&nbsp;так с&nbsp;кофе, почему даете такую цену
 								+e.btn.link-modal(href="#modal-test") Получить тестовую партию бесплатно
+			// end headerBlock
+mixin headerBlock00(count= counter)
+	.wrap
+		- for (var x = 0; x < count; x++)
+			// start headerBlock
+			+b.headerBlock(style="background-image: url(../img/@2x/head-bg.jpg);").section&attributes(attributes)
+				block
+				+pic('santo.png').santo
+				.container
+					+e.title
+						h1.text-start Капсульный
+						.row
+							.col-lg-auto
+								+e.lg кофе
+							.col-lg-auto
+								+e.text премиум качества от&nbsp;20&nbsp;Р за&nbsp;штуку с&nbsp;доставкой по&nbsp;всей России
+					+e.body
+						+e.row.row
+							+e.col.col-lg-auto
+								.row.g-0.row--lg
+									+e.card--lg.bg-wrap.col-12
+										+pic("photohead.png",'bg',0).d-none.d-lg-block.picture-bg
+										+e.card-text2 Для <br> кофемашин   <br>
+											img(src="img/@2x/nespresso.png", alt="")
+							
+
+							+e.col-right.col
+								+e.link-wrap
+									+e.text-right.h6 Нажмите на&nbsp;кнопку для перехода на&nbsp;соответствующую страницу
+								+e.btn-grad--biz(href="#"): span Кофе для бинеса
+								+e.btn-grad--base(href="#"): span Кофе для себя
+			// end headerBlock
+mixin headerBlock01(count= counter)
+	.wrap
+		- for (var x = 0; x < count; x++)
+			// start headerBlock
+			+b.headerBlock(style="background-image: url(../img/@2x/head-bg.jpg);").section&attributes(attributes)
+				block
+				+pic('santo.png').santo
+				.container
+					+e.title
+						h1.text-start Капсульный
+						.row
+							.col-lg-auto
+								+e.lg кофе
+							.col-lg-auto
+								+e.text--01 из&nbsp;элитных сортов Арабики по&nbsp;доступной цене
+					+e.body
+						+e.row.row
+							+e.col.col-lg-auto
+								.row.g-0.row--lg
+									+e.card--lg.bg-wrap.col-12
+										+pic("photohead.png",'bg',0).d-none.d-lg-block.picture-bg
+										+e.card-text2 Для <br> кофемашин   <br>
+											img(src="img/@2x/nespresso.png", alt="")
+							
+
+							+e.col-right.col
+								+e.link-wrap
+									+e.text-right.h6 Сделайте первый заказ на&nbsp;любую сумму  и&nbsp;мы&nbsp;рассчитаем его по&nbsp;оптовым ценам
+								+e.btn--01.link-modal(href="#modal-test") Делаю первый заказ
 			// end headerBlock

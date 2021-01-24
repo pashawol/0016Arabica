@@ -215,22 +215,22 @@ function eventHandler() {
 			$(".sticky-block__close").click(function(){
 				$(".sticky-block--js").addClass('d-none');
 			})
-	function whenResize() { 
-		var $win = $(window);
-		var $marker = $('.sAbout');
-		//отслеживаем событие прокрутки страницы
-		if ($marker){
+			function whenResize() { 
+				var $win = $(window);
+				var $marker = $('.sAbout');
+				if($marker[0]) {
 
-			$win.scroll(function() { 
-				if($win.scrollTop() + $win.height() >= $marker.offset().top) {
-					// $('#message').html('виден'); //выполняем действия если элемент виден
-					$(".sticky-block--js").addClass('active');
-				}else{
-					$(".sticky-block--js").removeClass('active'); 
-				}
+					//отслеживаем событие прокрутки страницы
+					$win.scroll(function() { 
+					if($win.scrollTop() + $win.height() >= $marker.offset().top) {
+						// $('#message').html('виден'); //выполняем действия если элемент виден
+						$(".sticky-block--js").addClass('active');
+					}else{
+						$(".sticky-block--js").removeClass('active'); 
+					}
+				});
 			}
-		});
-	}
+			}
 
 	window.addEventListener('resize', () => {
 		whenResize();
@@ -247,20 +247,18 @@ function eventHandler() {
 		var wipeAnimation = new TimelineMax()  
 			.to(".headerBlock", .1,{className:"+=start"})
 			// .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
-			.to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
-			.to(".headerBlock", 1,{opacity: 0, delay: -.5} )
-			.to(".sBanner__container", .9, {y: "0%", opacity: 1, delay: -.8}, )
-			.to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.8}, )
-			// .to(".headerBlock", 1, {opacity: 0, transform: "rotateY(90deg)"})
-			// .fromTo("sBanner", .1, {}, {});
+			.to(".headerBlock", .6,{ transform: "rotateY(90deg)"} )
+			.to(".headerBlock", .6,{opacity: 0, delay: -.5} )
+			.to(".sBanner__container", .9, {y: "0%", opacity: 1, delay: -.5}, )
+			.to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.5}, ) 
 			
 		// create scene to pin and link animation
 		new ScrollMagic.Scene({
-			triggerElement: ".header",
+			triggerElement: ".header--js",
 			triggerHook: "onLeave",
-			duration: "60%"
+			duration: "120%"
 		})
-			.setPin(".header")
+			.setPin(".header--js")
 			.setTween(wipeAnimation)
 			// .addIndicators() // add indicators (requires plugin)
 			.addTo(controller);
@@ -422,6 +420,7 @@ function eventHandler() {
 		...defaultSl,
 		slidesPerView: 1,
 		spaceBetween: 46,
+		// loopedSlides: 5,
 		navigation: {
 			nextEl: '.sSert2 .swiper-button-next',
 			prevEl: '.sSert2 .swiper-button-prev',
