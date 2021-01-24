@@ -7,10 +7,11 @@ mixin sGuarantee(data)
 		mixin item(i,l)
 			+e.group
 				+e.img-wrap
-					+pic(`sGuarantee-${i}.jpg`,'bg')
+					+pic(`sGuarantee-${i}.jpg`,'bg').pic
 				.container
 					+e.text-block
 						block
+				+pic('santo.png').santo
 			// /+e.group
 		+item(1,'l')
 			.h4 Бывает, что кофе из&nbsp;капсул не&nbsp;оправдывает ожиданий&nbsp;&mdash; получается водянистым и&nbsp;не&nbsp;вкусным. Почему так?

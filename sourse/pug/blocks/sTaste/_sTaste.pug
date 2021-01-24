@@ -8,13 +8,14 @@ mixin sTaste(data)
 		mixin item(i,l)
 			+e.group
 				+e.img-wrap
-					+pic(`sTaste-img-${i}.jpg`,'bg')
+					+pic(`sTaste-img-${i}.jpg`,'bg').pic
 					if l
 						+e.link-block
 							+e.link.link-modal(href="#modal-text3") Однородность помола гарантирует одинаковый вкус кофе в&nbsp;каждой порции
 				.container
 					+e.text-block
 						block
+				+pic('santo.png').santo
 			// /+e.group
 		+item(1,'l')
 			.h6 Помол должен быть таким, чтобы извлекать из&nbsp;кофе&nbsp;20% растворимых твердых веществ за&nbsp;12-20 секунд&nbsp;&mdash; именно столько времени нужно кофемашине на&nbsp;приготовление чашки напитка.

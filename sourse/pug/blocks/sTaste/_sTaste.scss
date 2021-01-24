@@ -4,7 +4,9 @@
 	.sTaste {
 		--sPT: #{rem(30)};
 		padding-bottom: 0;
-	
+		.santo{
+			max-width: (1093 * 100% / 1920);
+		}
 		&__img-wrap{
 			@include media-breakpoint-down(md) {
 				position: relative;
@@ -16,6 +18,8 @@
 			@include bgs;
 			padding-bottom: 1px;
 			background-image: url(../img/@2x/webp/sTaste-bg.webp);
+			z-index: 2;
+			position: relative;
 			@include media-breakpoint-down(md){
 				background-size: 200%;
 				background-position: left bottom;
@@ -33,7 +37,7 @@
 				justify-content: center;
 			}
 
-			picture{
+			.pic{
 				@include media-breakpoint-up(md) {
 			
 					position: absolute;	
