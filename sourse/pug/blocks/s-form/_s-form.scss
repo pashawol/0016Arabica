@@ -36,7 +36,7 @@
 		&__btn{
 			margin-left: 1.5px;
 			margin-right: 1.5px;
-			@media (min-width: 440px){
+			@include media-breakpoint-up(sm) {
 				width: calc(25% - 3px);
 			}
 			width: calc(50% - 3px);
@@ -73,7 +73,7 @@
 				}
 			}
 			.icon{
-					font-size: rem(24);
+					font-size: 24px;
 					margin-right: rem(6);
 					color: $body-color;
 					opacity: 0.58;

@@ -4,8 +4,11 @@
 		background-color: $body-color;
 		background-image: url(../img/@2x/webp/catalog-bg.webp);
 		color: #ffffff;
-		--sPT: #{rem(112)};
-		--sPB: #{rem(120)};
+		@include media-breakpoint-up(sm) {
+
+			--sPT: #{rem(112)};
+			--sPB: #{rem(120)};
+		}
 		--swiperArrowSize: #{rem(74)};
 		@include media-breakpoint-up(xl) {
 			--swiperArrowPosition: #{rem(-75px)};
@@ -17,6 +20,11 @@
 			margin-right: auto;
 			text-transform: uppercase;
 			max-width: rem(1150);
+			@include media-breakpoint-down(sm) {
+				text-align: left;
+				font-size: 15px;
+				line-height: normal;
+			}
 		}
 		 &__slider{
 			 max-width: 1170px;

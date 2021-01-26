@@ -2,7 +2,9 @@
 	// start .sAbout
 	.sAbout {
 		color: #ffffff;
-		--sPT: #{rem(85)};
+		@include media-breakpoint-up(sm) {
+			--sPT: #{rem(85)};
+		}
 		--sPB: 0;
 		position: relative;
 		z-index: 4;
@@ -59,6 +61,7 @@
 			 }
 		 }
 		 p{
+			 line-height: (20 / 13);
 			 span{
 				color: #878787;
 			 }
@@ -121,6 +124,11 @@
 	@include media-breakpoint-only(xl) {}
 	//
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		h2{
+			font-size: 15px;
+		}
+	}
 	.container{
 	 
 	}
@@ -175,7 +183,7 @@
 			z-index: 4;
 		}
 		.icon{
-			font-size: rem(20);
+			font-size: 20px;
 			margin-right: 6px;
  
 		}

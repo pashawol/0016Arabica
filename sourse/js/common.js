@@ -247,8 +247,8 @@ function eventHandler() {
 		var wipeAnimation = new TimelineMax()  
 			.to(".headerBlock", .1,{className:"+=start"})
 			// .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
-			.to(".headerBlock", .6,{ transform: "rotateY(90deg)"} )
-			.to(".headerBlock", .6,{opacity: 0, delay: -.2} )
+			.to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
+			.to(".headerBlock", .4,{opacity: 0, delay: -.2} )
 			.to(".sBanner__container", .9, {y: "0%", opacity: 1, delay: -.5}, )
 			// .to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.5}, ) 
 			

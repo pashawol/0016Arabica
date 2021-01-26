@@ -15,6 +15,10 @@
 			 margin-left: auto;
 			 margin-right: auto;
 			 max-width: rem(950);
+			 @include media-breakpoint-down(sm) {
+					 line-height: normal;
+					 font-size: 16px;
+			 }
 			 strong{
 				 display: inline-block;
 			 }
@@ -22,6 +26,10 @@
 		 p{ 
 			 @extend .h4;
 			 font-weight: bold;
+			 @include media-breakpoint-down(sm) {
+				 font-size: 14px;
+				 line-height: normal;
+			 }
 		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

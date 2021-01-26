@@ -251,9 +251,9 @@ function eventHandler() {
 	var wipeAnimation = new TimelineMax().to(".headerBlock", .1, {
 		className: "+=start"
 	}) // .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
-	.to(".headerBlock", .6, {
+	.to(".headerBlock", 1, {
 		transform: "rotateY(90deg)"
-	}).to(".headerBlock", .6, {
+	}).to(".headerBlock", .4, {
 		opacity: 0,
 		delay: -.2
 	}).to(".sBanner__container", .9, {

@@ -1,19 +1,24 @@
 
 	// start .sMaterials
 	.sMaterials {
-		--sTP: #{rem(120)};
+		@include media-breakpoint-up(md) {
+			--sTP: #{rem(120)};
+		}
+		--sTP: #{rem(60)};
 		padding-top: var(--sTP);
 		&__black{
-			max-width: 370px; 
 			border-radius: $border-radius;
 			background-color: #151515;
-			padding: rem(25) rem(33);
+			padding: rem(20) rem(23);
 			color: #ffffff;
 			margin-top: rem(70);
+			max-width: 250px;
 			@include media-breakpoint-up(md) {
+				padding: rem(25) rem(33);
 				margin-bottom: rem(20);
+				max-width: 370px; 
+				margin-bottom: rem(80);
 			}
-			margin-bottom: rem(80);
 		}
 		h2{
 			@extend .h4;
@@ -27,11 +32,8 @@
 			strong{
 				font-weight: bold;
 			}
-			span{
-				border-bottom: 1px dashed;
-				&:hover{
-					border-color: transparent;
-				}
+			a{
+				 
 				position: relative;
 				&::after{
 				content: '?';
@@ -70,10 +72,15 @@
 			}
 		}
 		&__caps-wrap{
-			height: rem(520);
+			@include media-breakpoint-up(md) {
+
+				max-width: rem(465);
+				height: rem(520);
+			}
+			max-width: rem(465 * .8);
+			height: rem(520 * .8);
 			position: relative;
 			// margin-bottom: rem(20);
-			max-width: rem(465);
 			margin-left: auto;
 			margin-right: auto;
 			&::before,
@@ -112,18 +119,28 @@
 				&:nth-child(1){
 					top: (-38% + 32%);
 					left: 25%;
-					width: 90%;
+					@include media-breakpoint-up(md){
+						width: 90%;
+					}
+					width: 80%;
 				}
 				
 				&:nth-child(2){
 					top: (11%   + 38%);
 					left: -25%;
-					width: 78%;
+					@include media-breakpoint-up(md){
+						width: 78%;
+					}
+					width: 68%;
 				}
 				&:nth-child(3){
 					top: (50%);
 					left: 65%;
-					width: 78%;
+					@include media-breakpoint-up(md){
+
+						width: 78%;
+					}
+					width: 68%;
 				}
 
 			}
