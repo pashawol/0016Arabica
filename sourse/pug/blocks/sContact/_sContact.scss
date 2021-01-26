@@ -21,7 +21,7 @@
 			margin-right: calc(-50vw - -76%);
 		}
 
-		iframe, script {
+		iframe, script, > ymaps {
 			width: 100%;
 			height: 100%;
 			@include a-cent;
