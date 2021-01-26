@@ -33,8 +33,8 @@ mixin mass-block()
 			+icon("tel")
 mixin contact-block(soc)
 	+b.contact-block&attributes(attributes)
-		+e.text Давайте обсудим #[strong ваш первый заказ]&nbsp;&mdash; свяжитесь с&nbsp;нами удобным вам способом и&nbsp;мы&nbsp;рассчитаем стоимость партии нужного объема на&nbsp;специальных условиях
 		if !soc
+			+e.text Давайте обсудим #[strong ваш первый заказ]&nbsp;&mdash; свяжитесь с&nbsp;нами удобным вам способом и&nbsp;мы&nbsp;рассчитаем стоимость партии нужного объема на&nbsp;специальных условиях
 			+e.btns
 				+e.btn.active(href="#")
 					span
@@ -52,4 +52,5 @@ mixin contact-block(soc)
 					+icon('call')
 					| Звонок
 		else
+			+e.text Поделитесь этой страницей в&nbsp;любой социальной сети и&nbsp;получите дополнительную скидку на&nbsp;заказ
 			+soc()

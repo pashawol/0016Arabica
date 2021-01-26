@@ -32,7 +32,7 @@
 	
 	--sPT: 0;
 	--sPB: #{rem(126)}; 
-	$count: 20;
+	$count: 10;
 	--cols: #{$count};
 	--col: 1;
 
@@ -264,7 +264,13 @@
 	
 	&__link-wrap{
 		width: rem(330);
+		@include media-breakpoint-down(md){
+			width: 245px;
 
+			margin-left: auto;
+			margin-right: auto;
+		}
+			// max-width: 300px;
 	}
 	&__link{
 		font-size: rem(16);
@@ -311,15 +317,26 @@
 
 	&__text-right{
 		margin-bottom: rem(30);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(xxl){
 
 			margin-top: rem(150);
+		}
+		@include media-breakpoint-up(lg){
+
+			margin-top: rem(100);
+		}
+		@include media-breakpoint-down(md) {
+			
 		}
 	}
 
 	&__btn-grad{
 		width: rem(318);
-		height: rem(83);
+		@include media-breakpoint-up(xxl) {
+
+			height: rem(83);
+		}
+		height: rem(73);
 		display: flex;
 		justify-content: center;
 		text-transform: uppercase;

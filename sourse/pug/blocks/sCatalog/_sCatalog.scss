@@ -58,6 +58,18 @@
 			 line-height: normal;
 			 top: 0;
 			 left: 0;
+			 padding-left: rem(15);
+			 font-weight: 500;
+			 &::before{
+				 content: '';
+				 width: $border-radius;
+					height: $border-radius;
+					background-color: currentColor;
+					border-radius: 50%;
+					position: absolute;
+					left: 0;
+					top: rem(8);
+			 }
 		 }
 		 &__title{
 			 @extend .h5;

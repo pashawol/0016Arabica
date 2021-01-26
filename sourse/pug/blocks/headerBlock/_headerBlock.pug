@@ -1,4 +1,4 @@
-- let counter = 20
+- let counter = 10
 mixin headerBlock(count= counter)
 	.wrap
 		- for (var x = 0; x < count; x++)
@@ -77,6 +77,7 @@ mixin headerBlock01(count= counter)
 				+pic('santo.png').santo
 				.container
 					+e.title
+						.h5.ttu.text-start Больше не&nbsp;нужно следить за&nbsp;акциями в&nbsp;соседнем магазине!
 						h1.text-start Капсульный
 						.row
 							.col-lg-auto
@@ -95,6 +96,7 @@ mixin headerBlock01(count= counter)
 
 							+e.col-right.col
 								+e.link-wrap
-									+e.text-right.h6 Сделайте первый заказ на&nbsp;любую сумму  и&nbsp;мы&nbsp;рассчитаем его по&nbsp;оптовым ценам
-								+e.btn--01.link-modal(href="#modal-test") Делаю первый заказ
+									+e.text-right.h6 
+								+e.btn--01.scroll-link(href="#sCatalog") Перейти к выбору кофе
+								p Оптовые цены только для этого сайта
 			// end headerBlock

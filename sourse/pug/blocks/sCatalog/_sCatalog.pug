@@ -12,11 +12,12 @@ mixin sCatalog(b)
 						mixin slide( i,r,t,p, b)
 							+e.slide.swiper-slide
 								+e.item
-									+e.img-wrap(href="#"  )
+									+e.img-wrap.link-modal(href="#modal-prod")
 										if r
 											+e.alert.text-danger= r
 										img.res-i.swiper-lazy(src="#" data-src=`img/@2x/prod-${i}.png`, alt="")
-									+e.title= t
+									+e.title
+										a.link-modal.text-white(href="#modal-prod")= t
 									p= p
 									if b
 										+e.gr.row

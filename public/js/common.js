@@ -31,11 +31,9 @@ var JSCCommon = {
 
 				}
 			},
-			beforeLoad: function beforeLoad() {
-				document.querySelector("html").classList.add("fixed");
+			beforeLoad: function beforeLoad() {// document.querySelector("html").classList.add("fixed")
 			},
-			afterClose: function afterClose() {
-				document.querySelector("html").classList.remove("fixed");
+			afterClose: function afterClose() {// document.querySelector("html").classList.remove("fixed")
 			}
 		});
 		$(".modal-close-js").click(function () {
@@ -257,21 +255,18 @@ function eventHandler() {
 		transform: "rotateY(90deg)"
 	}).to(".headerBlock", .6, {
 		opacity: 0,
-		delay: -.5
+		delay: -.2
 	}).to(".sBanner__container", .9, {
 		y: "0%",
 		opacity: 1,
 		delay: -.5
-	}).to(".sBanner__text", .9, {
-		y: "0%",
-		opacity: 1,
-		delay: -.5
-	}); // create scene to pin and link animation
+	}); // .to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.5}, ) 
+	// create scene to pin and link animation
 
 	new ScrollMagic.Scene({
 		triggerElement: ".header--js",
 		triggerHook: "onLeave",
-		duration: "120%"
+		duration: "100%"
 	}).setPin(".header--js").setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 	var tween = new TimelineMax().add([TweenMax.fromTo(".cap-1", 1, {

@@ -79,13 +79,19 @@
 			&::before,
 			&::after{
 					content: '';
-					@include a-cent1; 
+					// @include a-cent1;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-left: calc(-1 *var(--w) /2); 
+					margin-top: calc(-1 *var(--w) /2); 
 					z-index: -1;
 					border: 1px solid #dadada;
 					opacity: 0.31;
 					border-radius: 50%;
 					width: var(--w);
 					height: var(--w);
+					animation: d infinite ease-in-out 2s;
 				}
 				@include media-breakpoint-up(md) {
 					&::before{
@@ -138,3 +144,20 @@
 	//
 	@include media-breakpoint-down(xl) {}
 } // end.sMaterials
+
+
+@keyframes d {
+	0% {
+		transform: scale(.8);
+		opacity: 0
+	}
+
+	50% {
+		opacity: 1
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 0
+	}
+}

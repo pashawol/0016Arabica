@@ -27,10 +27,10 @@ const JSCCommon = {
 				},
 			},
 			beforeLoad: function () {
-				document.querySelector("html").classList.add("fixed")
+				// document.querySelector("html").classList.add("fixed")
 			},
 			afterClose: function () {
-				document.querySelector("html").classList.remove("fixed")
+				// document.querySelector("html").classList.remove("fixed")
 			},
 		});
 		$(".modal-close-js").click(function () {
@@ -248,15 +248,15 @@ function eventHandler() {
 			.to(".headerBlock", .1,{className:"+=start"})
 			// .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
 			.to(".headerBlock", .6,{ transform: "rotateY(90deg)"} )
-			.to(".headerBlock", .6,{opacity: 0, delay: -.5} )
+			.to(".headerBlock", .6,{opacity: 0, delay: -.2} )
 			.to(".sBanner__container", .9, {y: "0%", opacity: 1, delay: -.5}, )
-			.to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.5}, ) 
+			// .to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.5}, ) 
 			
 		// create scene to pin and link animation
 		new ScrollMagic.Scene({
 			triggerElement: ".header--js",
 			triggerHook: "onLeave",
-			duration: "120%"
+			duration: "100%"
 		})
 			.setPin(".header--js")
 			.setTween(wipeAnimation)

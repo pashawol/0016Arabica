@@ -22,16 +22,13 @@ mixin sDelivery(data)
 									img(src=`img/@2x/delivery-${x}.jpg`, alt="")
 									//- img.swiper-lazy(src="#" data-src=`img/@2x/delivery-${x}.jpg`, alt="")
 								+e.text!= t
-									if i == 05
-										+e.subtext
-											p Работаем с #[strong Деловыми Линиями, СДЕК, BoxBerry, PickPoint, DPD, Деловыми Линиями, ПЭК]
-											p В момент согласования заказа мы уточним, какой ТК вам удобнее получить товар.
-											p Если хотите доставку товара ТК, которой нет в списке, подумаем и решим, как это сделать.
+									block
 								+e.numb= i
 						+slide(1,'01', 'Получаем заявку')
 						+slide(2,'02', 'Выставляем счет')
 						+slide(3,'03', 'Получаем 100% оплату')
 						+slide(4,'04', 'Формируем заказ')
-						+slide(5,'05', `Оформляем ТК <span class="sDelivery__prompt">?</span>` )
+						+slide(5,'05', `` )
+							a.text-body.link-modal(href="#modal-shipping") Оформляем ТК <span class="sDelivery__prompt">?</span>
 						+slide(6,'06', 'Доставка')
 	// end sDelivery

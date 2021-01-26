@@ -115,6 +115,7 @@
 		padding-bottom: rem(25);
 		user-select: none;
 
+		&.swiper-slide-active .sDelivery__imgWrap,
 		&:hover .sDelivery__imgWrap {
 			filter: none
 		}

@@ -1,6 +1,11 @@
 .top-nav {
-	 padding-top: rem(20);
-	 padding-bottom: rem(20);
+	@include media-breakpoint-up(xxl){
+
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+	}
+	padding-top: rem(5);
+	padding-bottom: rem(5);
 	border-bottom: 1px solid rgba($color: #fff, $alpha: .13); 
 	z-index: 1100;
 	&.fixed { 

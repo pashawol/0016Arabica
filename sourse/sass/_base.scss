@@ -436,7 +436,7 @@ iframe {
 *::selection {
 	color: #fff;
 	/* Цвет текста */
-	background: var(--bs-primary) ;
+	background:rgba(195,16,108,1);
 	/* Цвет фона */
 }
 
@@ -541,4 +541,9 @@ iframe {
 	img{
 		max-width: 90%;
 	}
+}
+
+
+.btn{
+	box-shadow: none !important;
 }

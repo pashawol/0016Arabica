@@ -26,6 +26,28 @@
 			}
 			color: #878787;
 			position: relative;
+			&::before,
+			&::after{
+				content: '';
+				top: 0;
+				border-left: 1px solid #ffffff;
+				// border-right: 1px solid #ffffff;
+				opacity: 0.04;
+				height: 100%;
+				pointer-events: none;
+				position: absolute;
+			} 
+			&::after{
+				left: 3%;
+				width: 1px;
+			}
+			&::before{
+				left: 15%;
+				border-left: 1px solid #ffffff;
+				border-right: 1px solid #ffffff;
+			 
+				width: 20%; 
+			}
 			@include media-breakpoint-up(md){
 				
 				min-height: 100vh;
