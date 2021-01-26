@@ -73,6 +73,11 @@
 			margin-right: rem(5);
 		}
 	}
+	@include media-breakpoint-down(sm) {
+		.mass-block__item .icon{
+			font-size: 14px;
+		}
+	}
 
 	&__tel {
 		margin-bottom: rem(9);
@@ -80,6 +85,9 @@
 		font-size: $h6-font-size;
 		font-weight: 500;
 		margin-right: 3px;
+		@include media-breakpoint-down(sm) {
+			font-size: 25px;
+		}
 		letter-spacing: rem(0.2);
 	}
 
@@ -139,6 +147,7 @@
 			text-align: center;
 			display: block;
 			margin-bottom: rem(35);
+			font-size: 12px;
 		}
 	}
 
@@ -152,9 +161,12 @@
 			padding-top: rem(7);
 		}
 		@include media-breakpoint-down(sm) {
+			font-size: 12px;
 			flex-direction: column;
 			align-items: center;
-
+			img{
+				max-width: 105px;
+			}
 			span {
 				margin-bottom: rem(5);
 			}

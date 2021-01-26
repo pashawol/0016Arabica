@@ -3,8 +3,12 @@ mixin sCatalog(b)
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		+pic('santo.png').santo
 		.container
-			+b.section-title.text-center
-				h2 Сформируйте партию specialty coffee #[strong по&nbsp;лучшей на&nbsp;сегодняшний день стоимости]
+			+b.section-title.text-sm-center
+				if b
+					h2 Выбирайте капсулы, кофе из&nbsp;которых не&nbsp;отличим от&nbsp;кофе,
+					.h6 приготовленным профессиональным  бариста в кофейне
+				else
+					h2 Сформируйте партию specialty coffee #[strong по&nbsp;лучшей на&nbsp;сегодняшний день стоимости]
 				
 			+e.wrap
 				+e.slider--js.swiper-container

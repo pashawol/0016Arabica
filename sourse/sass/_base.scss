@@ -32,6 +32,9 @@ h2{
 		@extend .tdsh;
 		color: currentColor !important;
 	}
+	@include media-breakpoint-down(sm) {
+		font-size: 16px;
+	}
 }
 body {
 	// min-width: 320px; 
@@ -546,4 +549,7 @@ iframe {
 
 .btn{
 	box-shadow: none !important;
+}
+.form-check-input{
+	box-shadow: none;
 }

@@ -5,7 +5,7 @@ mixin modal()
 	+b.modal-win--text.content-block(id="modal-text1" class=" " style="display: none" )
 
 		p.fw-600 Кофе из&nbsp;100% арабики наиболее востребован среди настоящих ценителей и&nbsp;гурманов мира.  <br> Его выбирают известные рестораторы для своих заведений и&nbsp;профессионалы кофейной сферы
-		p.strong Доля арабики на&nbsp;рынке кофе составляет примерно&nbsp;70% от&nbsp;всего объема выращиваемых зерен.
+		p: strong Доля арабики на&nbsp;рынке кофе составляет примерно&nbsp;70% от&nbsp;всего объема выращиваемых зерен.
 		p Растения достаточно &laquo;капризны&raquo; и&nbsp;нуждаются <br> в&nbsp;определенных условиях выращивания:
 		ul
 			li посадка на&nbsp;сравнительно высокой местности, примерно 1500&nbsp;м над уровнем моря&nbsp;&mdash; чем выше, тем богаче вкус
@@ -38,7 +38,7 @@ mixin modal()
 		+contact-block().mt-0
 	+b.modal-win--packaging.content-block(id="modal-packaging" class=" " style="display: none" )
 
-		p Работаем с&nbsp;СДЕК, BoxBerry, PickPoint,  DPD, Деловыми Линиями, ПЭК
+		p При упаковке капсул из&nbsp;них откачиват воздух (удаляют кислород) и&nbsp;закачивают азот. Это делается для того, чтобы при приготовлении кофе из&nbsp;капсулы #[strong даже через полгода-год сохранить вкус свежеобжаренного и&nbsp;только что помолотого кофе]
 		+pic("modal-img-2.jpg",'',0)
 	+b.modal-win--shipping.content-block(id="modal-shipping" class=" " style="display: none" )
 
@@ -58,7 +58,7 @@ mixin modal()
 		+b.form-wrap 
 			+e.group-title--sm.text-center  Получите тестовую партию кофе&nbsp;&mdash;  3&nbsp;капсулы разного вида #[span бесплатно] 
 			form
-				+form-tabs('Куда отправить счет на оплату?')
+				+form-tabs('Как с вами связаться?')
 				//- +inputName()
 				+e.btn(type="submit") получить тестовую партию
 			+polite()
@@ -68,7 +68,7 @@ mixin modal()
 			+e.group-title--sm.text-center  Стань нашим дилером в&nbsp;своем городе или в&nbsp;своей стране и&nbsp;#[span зарабатывай вместе с&nbsp;нами]
 			.strong.text-center.mb-3 Оставьте свои контакты, и&nbsp;мы&nbsp;перезвоним  и&nbsp;расскажем про условия сотрудничества
 			form
-				+form-tabs('Куда отправить счет на оплату?')
+				+form-tabs('Как с вами связаться?')
 				//- +inputName()
 				+e.btn(type="submit") Стать дилером
 			+polite()
@@ -77,7 +77,7 @@ mixin modal()
 	+b.modal-win--form(id="modal-call" class=" " style="display: none" )
 		+b.form-wrap 
 			+e.group-title--sm.text-center  Укажите контактные данные <br> и&nbsp;удобное время для звонка
-			.strong.text-center.mb-3 Оставьте свои контакты, и&nbsp;мы&nbsp;перезвоним  и&nbsp;расскажем про условия сотрудничества
+			.fw-500.text-center.mb-3 Специалист компании перезвонит вам прямо сейчас или в&nbsp;другое рабочее время. <br> Мы&nbsp;работаем с&nbsp;7:00 до&nbsp;20:00 по&nbsp;МСК
 			form
 				+e.input-with-icon
 					+input('Иван','text','Как с вами связаться?')
@@ -85,7 +85,14 @@ mixin modal()
 				+e.input-with-icon
 					+input('+7 (999) 444-44-44','tel','Введите номер телефона')
 						+icon("call")
-				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
+				.form-wrap__input-title Когда вам позвонить
+				+b.LABEL.time-block
+					input(type="checkbox" name="time") 
+					+e.btn--left Сейчас
+					+e.btn--right По времени
+				.input-time.d-none
+					+input('Например: 21 января в 14:00','text')
+						+icon("call")
 				+e.btn(type="submit") Перезвоните мне
 			+polite()
 	// #modal-call

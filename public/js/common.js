@@ -368,7 +368,7 @@ function eventHandler() {
 			prevEl: '.sCatalog .swiper-button-prev'
 		},
 		breakpoints: {
-			576: {
+			768: {
 				slidesPerView: 2
 			},
 			992: {
@@ -413,6 +413,26 @@ function eventHandler() {
 			}
 		}
 	}));
+
+	function myFunction() {
+		// Get the checkbox
+		var checkBox = document.querySelector(".time-block input");
+
+		if (checkBox) {
+			// Get the output text
+			var text = document.querySelector(".input-time"); // If the checkbox is checked, display the output text
+
+			if (checkBox.checked == true) {
+				text.classList.remove('d-none');
+			} else {
+				text.classList.add('d-none');
+			}
+		}
+	}
+
+	$(".time-block").click(function () {
+		myFunction();
+	});
 }
 
 ;

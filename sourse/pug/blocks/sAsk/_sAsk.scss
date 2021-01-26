@@ -4,8 +4,9 @@
 
 
 	.section-title {
-		padding-bottom: calc(var(--sTPB) / 1.3);
+		padding-bottom: calc(var(--sTPB) * 2);
 		@include media-breakpoint-up(sm) {
+			padding-bottom: calc(var(--sTPB) / 1.3);
 			text-align: center;
 		}
 
@@ -51,11 +52,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		min-height: rem(87);
 		border: solid 1px rgba($color: #000000, $alpha: 0.5);
 		border-radius: $border-radius;
 		font-size: 11px;
+		min-height: 70px;
 		@include media-breakpoint-up(md) {
+			min-height: rem(87);
 			font-size: rem(14);
 		}
 		padding: rem(5);
@@ -68,7 +70,7 @@
 		}
 
 		.icon {
-			font-size: rem(23);
+			font-size: 23px;
 			color:  #000000;
 			opacity: 0.58;
 			margin-right: rem(8);

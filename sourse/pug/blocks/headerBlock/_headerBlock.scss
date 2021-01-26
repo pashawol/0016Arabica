@@ -142,6 +142,9 @@
 		max-width: rem(510);
 		&--01{
 			max-width: rem(550);
+			@include media-breakpoint-down(sm){
+				color: #ffffff;
+			}
 		}
 		@include media-breakpoint-up(lg){
 			margin-bottom: 0;
@@ -390,6 +393,19 @@
 		}
 	}
 
+	.h5 {
+		text-align: left;
+		@include media-breakpoint-up(sm) {
+			text-transform: uppercase;
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 13px;
+			color: #ababab;
+			font-weight: 500;
+			max-width: 240px;
+			margin-bottom: 1em;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

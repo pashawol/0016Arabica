@@ -166,6 +166,47 @@ a {
 	}
 }
 
+.time-block{
+	input{
+		position: absolute;
+		@extend .invisible;
+	}
+	display: flex !important;
+	margin-bottom: rem(28); 
+	&__btn{
+		cursor: pointer;
+		width: 50%;
+		height: rem(63px);
+		font-size: 16px;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #d0d0d0;
+		@include mt;
+		color: #7e7e7e;
+		&--left{
+			border-radius: $border-radius 0 0 $border-radius;
+			background-color: $primary;
+			border-right: 0;
+			color: $body-color;
+		}
+		&--right{
+			border-radius: 0 $border-radius $border-radius 0;
+		}
+		&:hover{
+			background-color: $primary;
+		}
+	}
+	input:checked ~ .time-block__btn--left{
+		background-color: transparent;
+		color: #7e7e7e;
+	}
+	input:checked ~ .time-block__btn--right{ 
+		background-color: $primary;
+		color: $body-color;
+	}
+}
 // 
 @include media-breakpoint-up(xl) {}
 
