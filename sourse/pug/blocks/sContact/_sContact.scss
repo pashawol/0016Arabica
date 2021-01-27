@@ -36,11 +36,24 @@
 		color: #ffffff;
 		@extend .h4;
 		font-weight: 700;
+		@include media-breakpoint-down(sm) {
+			text-align: left;
+			font-size: 15px;
+			line-height: normal;
+			line-height: (25 / 15);
+		}
 	}
 
 	&__text {
 		color: #c6c6c6;
 		font-weight: 500;
+		@include media-breakpoint-down(sm) {
+			text-align: left;
+			font-size: 13px;
+			line-height: normal;
+			line-height: (20 / 13);
+			letter-spacing: normal; 
+		}
 	}
 
 	&__col {

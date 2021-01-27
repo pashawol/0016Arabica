@@ -16,8 +16,9 @@
 			 margin-right: auto;
 			 max-width: rem(950);
 			 @include media-breakpoint-down(sm) {
-					 line-height: normal;
-					 font-size: 16px;
+				 font-size: 16px;
+				 line-height: (23 / 16);
+				//  line-height: normal;
 			 }
 			 strong{
 				 display: inline-block;
@@ -27,8 +28,9 @@
 			 @extend .h4;
 			 font-weight: bold;
 			 @include media-breakpoint-down(sm) {
-				 font-size: 14px;
+				 font-size: 13px;
 				 line-height: normal;
+				 line-height: (20 / 13);
 			 }
 		 }
 	@include media-breakpoint-up(xl) {}

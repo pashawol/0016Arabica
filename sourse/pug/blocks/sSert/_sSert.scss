@@ -8,6 +8,11 @@
 		.section-title{
 			&__text{
 				color: #414141;
+				line-height: (20 / 13);
+				@include media-breakpoint-down(sm){
+					font-size: 13px;
+					max-width: 230px;
+				}
 			}
 		}
 		h2{

@@ -327,7 +327,7 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 'auto',
-		centeredSlides: true,
+		// centeredSlides: true,
 		spaceBetween: 10,
 		freeMode: true,
 		navigation: {

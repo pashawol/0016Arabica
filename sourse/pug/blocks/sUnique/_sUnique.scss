@@ -12,6 +12,7 @@
 				margin-left: auto;
 				margin-right: auto;
 				max-width: rem(560);
+				line-height: (20 / 13);
 			}
 		}
 
@@ -57,6 +58,11 @@
 		}
 		&__text{
 			color: #414141;
+			@include media-breakpoint-down(sm){
+				max-width: 270px;
+				font-size: 13px;
+				line-height: (20 / 13);
+			}
 			span{
 				border-bottom: 1px dotted;
 			}

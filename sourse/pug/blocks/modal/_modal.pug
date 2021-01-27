@@ -18,7 +18,7 @@ mixin modal()
 	
 	+b.modal-win--text.content-block(id="modal-text2" class=" " style="display: none" )
 
-		p: strong Качество обжарки оказывает ключевое влияние на&nbsp;качество будущего кофейного напитка
+		p.fw-600 #[strong Качество обжарки оказывает ключевое влияние] на&nbsp;качество будущего кофейного напитка
 
 		p:  strong Кофе самый сложный с&nbsp;точки зрения биохимии продукт, который мы&nbsp;употребляем в&nbsp;пищу. 
 
@@ -58,7 +58,7 @@ mixin modal()
 		+b.form-wrap 
 			+e.group-title--sm.text-center  Получите тестовую партию кофе&nbsp;&mdash;  3&nbsp;капсулы разного вида #[span бесплатно] 
 			form
-				+form-tabs('Как с вами связаться?')
+				+form-tabs('Как с вами связаться?', 'tel')
 				//- +inputName()
 				+e.btn(type="submit") получить тестовую партию
 			+polite()
@@ -68,7 +68,7 @@ mixin modal()
 			+e.group-title--sm.text-center  Стань нашим дилером в&nbsp;своем городе или в&nbsp;своей стране и&nbsp;#[span зарабатывай вместе с&nbsp;нами]
 			.strong.text-center.mb-3 Оставьте свои контакты, и&nbsp;мы&nbsp;перезвоним  и&nbsp;расскажем про условия сотрудничества
 			form
-				+form-tabs('Как с вами связаться?')
+				+form-tabs('Как с вами связаться?', 'tel')
 				//- +inputName()
 				+e.btn(type="submit") Стать дилером
 			+polite()

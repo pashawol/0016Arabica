@@ -28,6 +28,11 @@ html{
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
 }
 h2{
+	line-height: (65 / 50);
+	@include media-breakpoint-down(sm) {
+	line-height: (25 / 15);
+}
+
 	a{
 		@extend .tdsh;
 		color: currentColor !important;
@@ -439,7 +444,7 @@ iframe {
 *::selection {
 	color: #fff;
 	/* Цвет текста */
-	background:rgba(195,16,108,1);
+	background:#E94D09;
 	/* Цвет фона */
 }
 
@@ -553,3 +558,18 @@ iframe {
 .form-check-input{
 	box-shadow: none;
 }
+
+.fw-600{
+	font-weight: 600;
+}
+
+.h6{
+	line-height: (20 / 13);
+}
+
+p{
+	@include media-breakpoint-down(sm) {
+			line-height: (20 / 13);
+			font-size: 13px;
+			}
+	}

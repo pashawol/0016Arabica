@@ -1,4 +1,4 @@
-- let counter = 20
+- let counter = 12
 mixin headerBlock(count= counter)
 	.wrap
 		- for (var x = 0; x < count; x++)
@@ -98,5 +98,5 @@ mixin headerBlock01(count= counter)
 								+e.link-wrap
 									+e.text-right.h6 
 								+e.btn--01.scroll-link(href="#sCatalog") Перейти к выбору кофе
-								p Оптовые цены только для этого сайта
+								.small.mb-3.text-md-start.text-center Оптовые цены только для этого сайта
 			// end headerBlock

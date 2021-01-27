@@ -23,12 +23,26 @@
 			text-transform: uppercase;
 			line-height: calc(65/50);
 			margin-bottom: .85rem;
+			@include media-breakpoint-down(sm) {
+				text-align: left;
+				font-size: 15px;
+				line-height: normal;
+				line-height: (25 / 15);
+			}
 		}
 
 		&__subtitle {
 			@extend .h5;
 			color: #878787;
 			letter-spacing: rem(-0.15);
+			@include media-breakpoint-down(sm) {
+				text-align: left;
+				font-size: 13px;
+				line-height: normal;
+				line-height: (20 / 13);
+				letter-spacing: normal;
+				margin-bottom: 1rem;
+			}
 		}
 	}
 

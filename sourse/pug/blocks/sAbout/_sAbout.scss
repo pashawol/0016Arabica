@@ -128,6 +128,9 @@
 		h2{
 			font-size: 15px;
 		}
+		p{
+			font-size: 13px;
+		}
 	}
 	.container{
 	 
@@ -160,6 +163,11 @@
 	&__text{
 		font-weight: 500;
 		margin-bottom: rem(16);
+		@include media-breakpoint-down(sm) {
+		 
+				font-size: 13px; 
+				line-height: (20 / 13);
+		}
 	}
 	&__btn{
 		@extend .btn;

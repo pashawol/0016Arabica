@@ -328,7 +328,7 @@ function eventHandler() {
 	}));
 	var gal = new Swiper('.sGal__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
-		centeredSlides: true,
+		// centeredSlides: true,
 		spaceBetween: 10,
 		freeMode: true,
 		navigation: {

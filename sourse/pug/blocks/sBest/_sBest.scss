@@ -4,6 +4,10 @@
 			padding-top: 0;
 			padding-bottom: rem(40);
 			&__text {
+				max-width: rem(420);
+				// line-height: normal;
+				line-height: (27 / 18);
+				// line-height: normal;
 				a{
 					color: currentColor;
 					@extend .tdsh;
