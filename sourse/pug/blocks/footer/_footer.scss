@@ -160,6 +160,9 @@
 			margin-right: rem(20);
 			padding-top: rem(7);
 		}
+		img{
+			max-width: 155px;
+		}
 		@include media-breakpoint-down(sm) {
 			font-size: 12px;
 			flex-direction: column;
