@@ -1,4 +1,12 @@
+.fixed-menu .top-nav{
+	position: fixed;
+	background-color: $body-color;
+	z-index: 10;
+}
 .top-nav {
+	left: 0;
+	top: 0;
+	width: 100%;
 	@include media-breakpoint-up(xxl){
 
 		padding-top: rem(20);

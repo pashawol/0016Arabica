@@ -261,6 +261,8 @@ function eventHandler() {
 	}).to(".headerBlock", .4, {
 		opacity: 0,
 		delay: -.2
+	}).to(".headerBlock", .1, {
+		className: "+=end"
 	}).to(".sBanner__container", .9, {
 		y: "0%",
 		opacity: 1,
