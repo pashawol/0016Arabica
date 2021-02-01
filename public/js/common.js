@@ -11,30 +11,35 @@ var JSCCommon = {
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	modalCall: function modalCall() {
-		$(".link-modal").fancybox({
-			arrows: false,
-			infobar: false,
-			touch: false,
-			type: 'inline',
-			autoFocus: false,
-			i18n: {
-				en: {
-					CLOSE: "Закрыть",
-					NEXT: "Вперед",
-					PREV: "Назад" // PLAY_START: "Start slideshow",
-					// PLAY_STOP: "Pause slideshow",
-					// FULL_SCREEN: "Full screen",
-					// THUMBS: "Thumbnails",
-					// DOWNLOAD: "Download",
-					// SHARE: "Share",
-					// ZOOM: "Zoom"
+		$(document).on('click', '.link-modal', function (e) {
+			e.preventDefault();
+			var href = $(this).attr('href');
+			$.fancybox.open({
+				src: href,
+				arrows: false,
+				infobar: false,
+				touch: false,
+				type: 'inline',
+				autoFocus: false,
+				i18n: {
+					en: {
+						CLOSE: "Закрыть",
+						NEXT: "Вперед",
+						PREV: "Назад" // PLAY_START: "Start slideshow",
+						// PLAY_STOP: "Pause slideshow",
+						// FULL_SCREEN: "Full screen",
+						// THUMBS: "Thumbnails",
+						// DOWNLOAD: "Download",
+						// SHARE: "Share",
+						// ZOOM: "Zoom"
 
+					}
+				},
+				beforeLoad: function beforeLoad() {// document.querySelector("html").classList.add("fixed")
+				},
+				afterClose: function afterClose() {// document.querySelector("html").classList.remove("fixed")
 				}
-			},
-			beforeLoad: function beforeLoad() {// document.querySelector("html").classList.add("fixed")
-			},
-			afterClose: function afterClose() {// document.querySelector("html").classList.remove("fixed")
-			}
+			});
 		});
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();

@@ -6,33 +6,38 @@ const JSCCommon = {
 
 	modalCall() {
 
-		$(".link-modal").fancybox({
-			arrows: false,
-			infobar: false,
-			touch: false,
-			type: 'inline',
-			autoFocus: false,
-			i18n: {
-				en: {
-					CLOSE: "Закрыть",
-					NEXT: "Вперед",
-					PREV: "Назад",
-					// PLAY_START: "Start slideshow",
-					// PLAY_STOP: "Pause slideshow",
-					// FULL_SCREEN: "Full screen",
-					// THUMBS: "Thumbnails",
-					// DOWNLOAD: "Download",
-					// SHARE: "Share",
-					// ZOOM: "Zoom"
+		$(document).on('click', '.link-modal', function(e){
+			e.preventDefault();
+			var href = $(this).attr('href');
+			$.fancybox.open({
+				src: href,
+				arrows: false,
+				infobar: false,
+				touch: false,
+				type: 'inline',
+				autoFocus: false,
+				i18n: {
+					en: {
+						CLOSE: "Закрыть",
+						NEXT: "Вперед",
+						PREV: "Назад",
+						// PLAY_START: "Start slideshow",
+						// PLAY_STOP: "Pause slideshow",
+						// FULL_SCREEN: "Full screen",
+						// THUMBS: "Thumbnails",
+						// DOWNLOAD: "Download",
+						// SHARE: "Share",
+						// ZOOM: "Zoom"
+					},
 				},
-			},
-			beforeLoad: function () {
-				// document.querySelector("html").classList.add("fixed")
-			},
-			afterClose: function () {
-				// document.querySelector("html").classList.remove("fixed")
-			},
-		});
+				beforeLoad: function () {
+					// document.querySelector("html").classList.add("fixed")
+				},
+				afterClose: function () {
+					// document.querySelector("html").classList.remove("fixed")
+				},
+			});
+		})
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		})
@@ -298,7 +303,6 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-	
 		loop: true,
 		
 		// pagination: {

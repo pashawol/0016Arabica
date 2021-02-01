@@ -69,7 +69,7 @@ mixin add-file(n)
 			+e.SPAN.text   Прикрепить резюме
 		+e.SPAN.filename 
 
-mixin form-tabs(t, tel)
+mixin form-tabs(t, tel, dil)
 	.tabs.tabs--js&attributes(attributes)
 		.fw-500.mb-3= t
 		+e.group.row.g-1.tabs__caption
@@ -94,24 +94,27 @@ mixin form-tabs(t, tel)
 				else
 					span 
 						+icon('call')
-					| Телефон
+					| Звонок
 		.tabs__wrap
 			.tabs__content.active
 				+e.input-with-icon
 					+input('+7 (999) 444-44-44','tel','Введите WhatsApp')
 						+icon("whatsapp")
-				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
+				if !tel
+					.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
 			
 			.tabs__content
 				+e.input-with-icon
 					+input('+7 (999) 444-44-44','tel','Введите Viber')
 						+icon("viber")
-				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
+				if !tel
+					.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
 			.tabs__content
 				+e.input-with-icon
 					+input('+7 (999) 444-44-44','text','Введите Telegram')
 						+icon("viber")
-				.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
+				if !tel
+					.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
 			.tabs__content
 				if !tel
 					+e.input-with-icon
@@ -120,7 +123,7 @@ mixin form-tabs(t, tel)
 				+e.input-with-icon
 					+input('+7 (999) 444-44-44','tel','Введите номер телефона')
 						+icon("call")
-				if !tel
+				if tel && !dil
 					.text-center.text-secondary.mb-4 Перезвоним, чтобы обсудить условия поставки
 
 mixin polite()

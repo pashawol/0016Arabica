@@ -4,6 +4,9 @@
 		background-color: $body-color;
 		background-image: url(../img/@2x/webp/catalog-bg.webp);
 		color: #ffffff;
+		position: relative;
+		overflow: hidden;
+	
 		@include media-breakpoint-up(sm) {
 
 			--sPT: #{rem(112)};

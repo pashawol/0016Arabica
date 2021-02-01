@@ -37,13 +37,15 @@
 		&__left-block{
 			position: relative;
 			@include media-breakpoint-down(sm){
-				margin-right: calc(-1 * var(--bs-gutter-x));
+				margin-right: calc(-1 * (100vw - 100% + var(--bs-gutter-x)));
+				min-width: 100vw;
 			}
 			@include media-breakpoint-up(md){
 				margin-left: calc(-1 * (50vw - 100% + var(--bs-gutter-x)));
 			 
 			} 
 			margin-left: calc(-1 * (100vw - 100% + var(--bs-gutter-x)));
+
 		}
 		
 		h2{

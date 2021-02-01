@@ -18,7 +18,9 @@
 
 body,
 html {
-
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+	user-select: text;
 	font-size: var(--fontSizeBase);
 	// @include font-size(1rem);
 	// overflow-x: hidden;
@@ -132,6 +134,7 @@ body {
 	@include bgs;
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
+	user-select: text;
 }
 
 .section-title {
@@ -318,8 +321,15 @@ ul {
 	position: absolute;
 	top: 32%;
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
-	@include mt;
-
+	@include mt; 
+	user-select: none;
+	// display: block;
+	&::before{
+		content: '';
+		@include a-cent1;
+		width: 120%;
+		height: 120%;
+	}
 	&:hover {
 		background-color: var(--swiperBgDefHover);
 		border-color: var(--swiperBorderColorDefHover);
@@ -405,6 +415,9 @@ a {
 	@include mt;
 }
 
+img.img-bg{
+	pointer-events: none;
+}
 img.img-bg,
 .picture-bg {
 	position: absolute;
@@ -413,6 +426,7 @@ img.img-bg,
 	top: 0;
 	width: 100%;
 	height: 100%;
+	pointer-events: none;
 }
 
 
