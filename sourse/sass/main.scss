@@ -32,13 +32,13 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
 @import "./node_modules/bootstrap/scss/buttons";
-// @import "./node_modules/bootstrap/scss/transitions";
-// @import "./node_modules/bootstrap/scss/dropdown";
-// @import "./node_modules/bootstrap/scss/button-group";
+@import "./node_modules/bootstrap/scss/transitions";
+@import "./node_modules/bootstrap/scss/dropdown";
+@import "./node_modules/bootstrap/scss/button-group";
 // @import "./node_modules/bootstrap/scss/nav";
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/breadcrumb";
 // .breadcrumb {
 // 	.active {
 // 		a {
@@ -69,7 +69,7 @@ $output-bourbon-deprecation-warnings: false;
 // }
 
 
-// @import "./node_modules/bootstrap/scss/badge";
+@import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";
 // @import "./node_modules/bootstrap/scss/list-group";
@@ -79,7 +79,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/tooltip";
 // @import "./node_modules/bootstrap/scss/popover";
 // @import "./node_modules/bootstrap/scss/carousel";
-// @import "./node_modules/bootstrap/scss/spinners";
+@import "./node_modules/bootstrap/scss/spinners";
 
 // Helpers
 @import "./node_modules/bootstrap/scss/helpers";
