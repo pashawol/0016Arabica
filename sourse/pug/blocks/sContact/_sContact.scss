@@ -58,9 +58,12 @@
 
 	&__col {
 
-		&:not(:last-child) {
-			padding-bottom: rem(42);
+		padding-bottom: rem(42);
+		@include media-breakpoint-up(md) {
 
+			&:nth-child(2) {
+				padding-bottom: 0;
+			}
 		}
 	}
 

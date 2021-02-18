@@ -127,6 +127,10 @@
 		&__link{
 			color: #494949 !important;
 			border-bottom: 1px dashed;
+			&::before{
+				content: '';
+				@include a-cent;
+			}
 			&:hover{
 				border-color: transparent;
 			}

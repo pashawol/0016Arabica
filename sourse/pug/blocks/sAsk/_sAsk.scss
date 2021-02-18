@@ -35,7 +35,7 @@
 
 	&__tel {
 		line-height: 1;
-		color: $body-color;
+		color: $body-color !important;
 		font-weight: 700;
 		font-size: $h5-font-size;
 		@include media-breakpoint-up(md) {
@@ -43,7 +43,7 @@
 		}
 
 		&:hover {
-			text-shadow: 0 0 6px #000000;
+			// text-shadow: 0 0 6px #000000;
 		}
 	}
 

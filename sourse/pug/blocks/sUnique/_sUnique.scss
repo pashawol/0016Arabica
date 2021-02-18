@@ -73,7 +73,10 @@
 			position: relative;
 		}
 		&__lg{
-			@include rfs(105px);
+			@include media-breakpoint-up(xxl) {
+				font-size: rem(105);
+			}
+			@include rfs(90px);
 			max-width: rem(600);
 			position: absolute;
 			bottom: -.7em;

@@ -253,6 +253,14 @@
 		color: #494949 !important;  
 		font-weight: 500;
 		border-bottom: 1px dashed;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
 		&:hover{
 			border-color: transparent;
 		}
