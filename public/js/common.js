@@ -183,7 +183,7 @@ var JSCCommon = {
 	animateScroll: function animateScroll() {
 		$(document).on('click', " .top-nav li a, .scroll-link", function () {
 			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top;
+			var destination = $(elementClick).offset().top - 87;
 			$('html, body').animate({
 				scrollTop: destination
 			}, 1100);

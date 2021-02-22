@@ -6,7 +6,7 @@ const JSCCommon = {
 
 	modalCall() {
 
-		$(document).on('click', '.link-modal', function(e){
+		$(document).on('click', '.link-modal', function (e) {
 			e.preventDefault();
 			var href = $(this).attr('href');
 			$.fancybox.open({
@@ -176,7 +176,7 @@ const JSCCommon = {
 
 		$(document).on('click', " .top-nav li a, .scroll-link", function () {
 			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
+			const destination = $(elementClick).offset().top - 87;
 
 			$('html, body').animate({ scrollTop: destination }, 1100);
 
@@ -196,7 +196,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask(); 
+	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 
@@ -207,35 +207,35 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
-	 
-			// 	var original = document.querySelector('.headerBlock');
-			// 	if (original) {
 
-			// 	var clone = original.cloneNode(true); // "deep" clone
-			// 	for (let index = 0; index < 39; index++) {
-			// 		document.querySelector('.wrap').insertBefore(clone);
-			// 		console.log(index);
-			// 	}
-			// } 
-			$(".sticky-block__close").click(function(){
-				$(".sticky-block--js").addClass('d-none');
-			})
-			function whenResize() { 
-				var $win = $(window);
-				var $marker = $('.sAbout');
-				if($marker[0]) {
+	// 	var original = document.querySelector('.headerBlock');
+	// 	if (original) {
 
-					//отслеживаем событие прокрутки страницы
-					$win.scroll(function() { 
-					if($win.scrollTop() + $win.height() >= $marker.offset().top) {
-						// $('#message').html('виден'); //выполняем действия если элемент виден
-						$(".sticky-block--js").addClass('active');
-					}else{
-						$(".sticky-block--js").removeClass('active'); 
-					}
-				});
-			}
-			}
+	// 	var clone = original.cloneNode(true); // "deep" clone
+	// 	for (let index = 0; index < 39; index++) {
+	// 		document.querySelector('.wrap').insertBefore(clone);
+	// 		console.log(index);
+	// 	}
+	// } 
+	$(".sticky-block__close").click(function () {
+		$(".sticky-block--js").addClass('d-none');
+	})
+	function whenResize() {
+		var $win = $(window);
+		var $marker = $('.sAbout');
+		if ($marker[0]) {
+
+			//отслеживаем событие прокрутки страницы
+			$win.scroll(function () {
+				if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+					// $('#message').html('виден'); //выполняем действия если элемент виден
+					$(".sticky-block--js").addClass('active');
+				} else {
+					$(".sticky-block--js").removeClass('active');
+				}
+			});
+		}
+	}
 
 	window.addEventListener('resize', () => {
 		whenResize();
@@ -243,69 +243,69 @@ function eventHandler() {
 	}, { passive: true });
 
 	whenResize();
- 
-		// we'd only like to use iScroll for mobile...
-		var controller = new ScrollMagic.Controller(); 
+
+	// we'd only like to use iScroll for mobile...
+	var controller = new ScrollMagic.Controller();
 
 
-		// define movement of panels
-		var wipeAnimation = new TimelineMax()  
-			.to(".headerBlock", .1,{className:"+=start"})
-			// .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
-			.to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
-			.to(".headerBlock", .4,{opacity: 0, delay: -.2} )
-			.to(".headerBlock", .1,{className:"+=end"})
-			.to(".sBanner__container", .9, {y: "0%", opacity: 1, delay: -.5}, )
-			// .to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.5}, ) 
-			
-		// create scene to pin and link animation
-		new ScrollMagic.Scene({
-			triggerElement: ".header--js",
-			triggerHook: "onLeave",
-			duration: "100%"
-		})
-			.setPin(".header--js")
-			.setTween(wipeAnimation)
-			// .addIndicators() // add indicators (requires plugin)
-			.addTo(controller);
+	// define movement of panels
+	var wipeAnimation = new TimelineMax()
+		.to(".headerBlock", .1, { className: "+=start" })
+		// .to(".headerBlock", 1,{ transform: "rotateY(90deg)"} )
+		.to(".headerBlock", 1, { transform: "rotateY(90deg)" })
+		.to(".headerBlock", .4, { opacity: 0, delay: -.2 })
+		.to(".headerBlock", .1, { className: "+=end" })
+		.to(".sBanner__container", .9, { y: "0%", opacity: 1, delay: -.5 },)
+	// .to(".sBanner__text", .9, {y: "0%", opacity: 1, delay: -.5}, ) 
+
+	// create scene to pin and link animation
+	new ScrollMagic.Scene({
+		triggerElement: ".header--js",
+		triggerHook: "onLeave",
+		duration: "100%"
+	})
+		.setPin(".header--js")
+		.setTween(wipeAnimation)
+		// .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
 
 
-			var tween = new TimelineMax ()
-					.add([
-						TweenMax.fromTo(".cap-1", 1, {y: 150}, {y: -50}),
-						TweenMax.fromTo(".cap-2", 1, {y: 50}, {y: -100}),
-						TweenMax.fromTo(".cap-3", 1, {y: 100}, {y: -50})
-					]);
+	var tween = new TimelineMax()
+		.add([
+			TweenMax.fromTo(".cap-1", 1, { y: 150 }, { y: -50 }),
+			TweenMax.fromTo(".cap-2", 1, { y: 50 }, { y: -100 }),
+			TweenMax.fromTo(".cap-3", 1, { y: 100 }, { y: -50 })
+		]);
 
-				// build scene
-				var scene = new ScrollMagic.Scene({triggerElement: ".sMaterials__caps-wrap", duration: '80%', offset: 0})
-								.setTween(tween)
-								// .setPin(".sMaterials")
-								// .addIndicators() // add indicators (requires plugin)
-								.addTo(controller);
- 
-			var tween = new TimelineMax ()
-					.add([
-						TweenMax.fromTo(".man", 1, {y: 100}, {y: -50})
-					]);
+	// build scene
+	var scene = new ScrollMagic.Scene({ triggerElement: ".sMaterials__caps-wrap", duration: '80%', offset: 0 })
+		.setTween(tween)
+		// .setPin(".sMaterials")
+		// .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
 
-				// build scene
-				var scene = new ScrollMagic.Scene({triggerElement: ".s-form", duration: '80%', offset: 0})
-								.setTween(tween)
-								// .setPin(".sMaterials")
-								// .addIndicators() // add indicators (requires plugin)
-								.addTo(controller);
- 
+	var tween = new TimelineMax()
+		.add([
+			TweenMax.fromTo(".man", 1, { y: 100 }, { y: -50 })
+		]);
 
-	
+	// build scene
+	var scene = new ScrollMagic.Scene({ triggerElement: ".s-form", duration: '80%', offset: 0 })
+		.setTween(tween)
+		// .setPin(".sMaterials")
+		// .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
 
-	let defaultSl = { 
+
+
+
+	let defaultSl = {
 		lazy: {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
 		loop: true,
-		
+
 		// pagination: {
 		// 	el: ' .swiper-pagination',
 		// 	type: 'bullets',
@@ -325,7 +325,7 @@ function eventHandler() {
 			nextEl: '.sAbout .swiper-button-next',
 			prevEl: '.sAbout .swiper-button-prev',
 		},
-		
+
 	});
 
 	const gal = new Swiper('.sGal__slider--js', {
@@ -341,11 +341,11 @@ function eventHandler() {
 		},
 
 		breakpoints: {
-			768: { 
+			768: {
 				spaceBetween: 25,
 			},
-			
-			992: { 
+
+			992: {
 				spaceBetween: 50
 			},
 		},
@@ -354,7 +354,7 @@ function eventHandler() {
 			loadPrevNextAmount: 5,
 		},
 	});
-	
+
 	const swiper5 = new Swiper('.sSert__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -365,11 +365,11 @@ function eventHandler() {
 			prevEl: '.sSert .swiper-button-prev',
 		},
 		breakpoints: {
-		
+
 			480: {
 				slidesPerView: 2
 			},
-		
+
 		}
 	});
 	const swiper6 = new Swiper('.sCatalog__slider--js', {
@@ -382,19 +382,19 @@ function eventHandler() {
 			prevEl: '.sCatalog .swiper-button-prev',
 		},
 		breakpoints: {
-		
+
 			768: {
 				slidesPerView: 2
 			},
-		
+
 			992: {
 				slidesPerView: 3
 			},
-		
+
 		}
 	});
 
-	
+
 	const delivery = new Swiper('.sDelivery__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -407,10 +407,10 @@ function eventHandler() {
 		},
 
 		breakpoints: {
-			768: { 
+			768: {
 				spaceBetween: 20,
 			},
-			992: { 
+			992: {
 				spaceBetween: 30
 			},
 		},
@@ -438,28 +438,28 @@ function eventHandler() {
 			576: {
 				slidesPerView: 2,
 			}
-		
+
 		}
 	});
 
 
-function myFunction() {
-  // Get the checkbox
-	var checkBox = document.querySelector(".time-block input");
-	if (checkBox ){
+	function myFunction() {
+		// Get the checkbox
+		var checkBox = document.querySelector(".time-block input");
+		if (checkBox) {
 
-		// Get the output text
-		var text = document.querySelector(".input-time");
-		
-		// If the checkbox is checked, display the output text
-		if (checkBox.checked == true){
-			text.classList.remove('d-none')
-		} else {
-			text.classList.add('d-none')
+			// Get the output text
+			var text = document.querySelector(".input-time");
+
+			// If the checkbox is checked, display the output text
+			if (checkBox.checked == true) {
+				text.classList.remove('d-none')
+			} else {
+				text.classList.add('d-none')
+			}
 		}
 	}
-	}
-	$(".time-block").click(function(){
+	$(".time-block").click(function () {
 		myFunction()
 	})
 };

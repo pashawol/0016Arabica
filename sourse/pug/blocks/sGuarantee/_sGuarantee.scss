@@ -28,17 +28,23 @@
 			position: static !important;
 			margin-left: 0 !important;
 			max-width: rem(380);
+			position: relative;
 		}
 		&__link{
-
-			position: relative;
+			&::before{
+				content: '';
+				@include a-cent;
+			}
+			// position: relative;
 			&::after{
 			content: '?';
 			width: 1.4em;
 			height: 1.4em;
 			border-radius: 50%;
-			position: absolute;
-			right: -1.5em;
+			margin-right: -18px;
+			top: em(-3);
+			right: -.2em;
+			position: relative;
 			// font-size: .5em;
 			font-size: .7em;
 			display: inline-flex;
